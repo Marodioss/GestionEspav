@@ -95,6 +95,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Buletin.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Buletin.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Class.cs" />
     <Compile Include="Coeffi.cs" />
     <Compile Include="CrudEtudiant.cs">
@@ -110,6 +116,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImprimerBulletin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImprimerBulletin.Designer.cs">
+      <DependentUpon>ImprimerBulletin.cs</DependentUpon>
     </Compile>
     <Compile Include="ListEtudiant.cs">
       <SubType>Form</SubType>
@@ -140,11 +152,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Buletin.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Buletin.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrudEtudiant.resx">
       <DependentUpon>CrudEtudiant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImprimerBulletin.resx">
+      <DependentUpon>ImprimerBulletin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListEtudiant.resx">
       <DependentUpon>ListEtudiant.cs</DependentUpon>
@@ -180,6 +199,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
