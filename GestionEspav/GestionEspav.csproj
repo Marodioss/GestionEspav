@@ -103,7 +103,16 @@
     </Compile>
     <Compile Include="Class.cs" />
     <Compile Include="Coeffi.cs" />
+
     <Compile Include="Controle.cs" />
+
+    <Compile Include="CrudEnseignant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrudEnseignant.Designer.cs">
+      <DependentUpon>CrudEnseignant.cs</DependentUpon>
+    </Compile>
+
     <Compile Include="CrudEtudiant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +120,7 @@
       <DependentUpon>CrudEtudiant.cs</DependentUpon>
     </Compile>
     <Compile Include="DBclass.cs" />
+    <Compile Include="Enseignant.cs" />
     <Compile Include="Etudiant.cs" />
     <Compile Include="FichePayement.cs">
       <AutoGen>True</AutoGen>
@@ -124,17 +134,31 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="gestionMateriels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gestionMateriels.Designer.cs">
+      <DependentUpon>gestionMateriels.cs</DependentUpon>
+    </Compile>
     <Compile Include="ImprimerBulletin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ImprimerBulletin.Designer.cs">
       <DependentUpon>ImprimerBulletin.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Imprimerpayement.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Imprimerpayement.Designer.cs">
       <DependentUpon>Imprimerpayement.cs</DependentUpon>
+
+    <Compile Include="ListeEnseignant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListeEnseignant.Designer.cs">
+      <DependentUpon>ListeEnseignant.cs</DependentUpon>
+
     </Compile>
     <Compile Include="ListEtudiant.cs">
       <SubType>Form</SubType>
@@ -142,6 +166,7 @@
     <Compile Include="ListEtudiant.Designer.cs">
       <DependentUpon>ListEtudiant.cs</DependentUpon>
     </Compile>
+    <Compile Include="Materiel.cs" />
     <Compile Include="Matiere.cs" />
     <Compile Include="MatiereCrud.cs">
       <SubType>Form</SubType>
@@ -156,6 +181,13 @@
       <DependentUpon>Notes.cs</DependentUpon>
     </Compile>
     <Compile Include="NotesClass.cs" />
+    <Compile Include="paiementEns.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="paiementEns.Designer.cs">
+      <DependentUpon>paiementEns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaiementEnsg.cs" />
     <Compile Include="PayementETUClass.cs" />
     <Compile Include="PayementEtudiant.cs">
       <SubType>Form</SubType>
@@ -163,11 +195,27 @@
     <Compile Include="PayementEtudiant.Designer.cs">
       <DependentUpon>PayementEtudiant.cs</DependentUpon>
     </Compile>
+    <Compile Include="PresenceEns.cs" />
+    <Compile Include="presenceEnsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="presenceEnsg.Designer.cs">
+      <DependentUpon>presenceEnsg.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reservationMat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reservationMat.Designer.cs">
+      <DependentUpon>reservationMat.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Buletin.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Buletin.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrudEnseignant.resx">
+      <DependentUpon>CrudEnseignant.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrudEtudiant.resx">
       <DependentUpon>CrudEtudiant.cs</DependentUpon>
@@ -179,11 +227,19 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="gestionMateriels.resx">
+      <DependentUpon>gestionMateriels.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ImprimerBulletin.resx">
       <DependentUpon>ImprimerBulletin.cs</DependentUpon>
     </EmbeddedResource>
+
     <EmbeddedResource Include="Imprimerpayement.resx">
       <DependentUpon>Imprimerpayement.cs</DependentUpon>
+
+    <EmbeddedResource Include="ListeEnseignant.resx">
+      <DependentUpon>ListeEnseignant.cs</DependentUpon>
+
     </EmbeddedResource>
     <EmbeddedResource Include="ListEtudiant.resx">
       <DependentUpon>ListEtudiant.cs</DependentUpon>
@@ -194,8 +250,14 @@
     <EmbeddedResource Include="Notes.resx">
       <DependentUpon>Notes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="paiementEns.resx">
+      <DependentUpon>paiementEns.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayementEtudiant.resx">
       <DependentUpon>PayementEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="presenceEnsg.resx">
+      <DependentUpon>presenceEnsg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -206,6 +268,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="reservationMat.resx">
+      <DependentUpon>reservationMat.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
