@@ -26,21 +26,21 @@ namespace GestionEspav
         private void LoadcomboNote()
         {
 
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT concat(nom,'','niveau','',idclass) as nommaate , id  FROM matiere", con.getconnection);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT nom , id  FROM matiere", con.getconnection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             comboBox1.DataSource = dt;
-            comboBox1.DisplayMember = "nommaate";
+            comboBox1.DisplayMember = "nom";
             comboBox1.ValueMember = "id";
         }
         public void showTable()
         {
-            dataGridView1.DataSource = notes.getNotesList(new MySqlCommand("select distinct(m.nom )as Matiere ,e.nom , e.prenom , c.specialiter ,  n.note as Examen ,co.note as Controle from matiere m inner join notes n on (m.id = n.idmatiere) inner join etudiant e on (n.idEtudiant = e.id) inner join class c on (e.idclass = c.id) inner join controle co on (m.id = co.idmatiere) group by m.nom;"));
+            dataGridView1.DataSource = notes.getNotesList(new MySqlCommand("SELECT m.nom,c.coff , cl.specialiter , ex.note as examen , co.note ,e.nom , e.prenom as controle from matiere m INNER JOIN coefficient c on (m.id = c.idmatiere) INNER JOIN class cl ON(c.idclass = cl.id) inner join etudiant e on (cl.id = e.idclass) inner JOIN notes ex on (ex.idmatiere = m.id and ex.idEtudiant = e.id)inner JOIN controle co on (co.idmatiere = m.id and co.idEtudiant = e.id);"));
         }
 
         private void Notes_Load(object sender, EventArgs e)
         {
-
+            showTable();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -51,7 +51,7 @@ namespace GestionEspav
         
             if (notes.InsertNote(note, idM, idE))
             {
-                MessageBox.Show("Payement Ajouter", "Payement Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Note Ajouter", "Payement Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 showTable();
             }
             else

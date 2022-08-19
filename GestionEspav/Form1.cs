@@ -15,6 +15,7 @@ namespace GestionEspav
         public Form1()
         {
             InitializeComponent();
+            CostumeDesign();
         }
         private void CostumeDesign()
         {
@@ -90,6 +91,40 @@ namespace GestionEspav
         {
             openChildForm(new PayementEtudiant());
             hidesubmenu();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            showsubmenu(panel6);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CrudEnseignant());
+            hidesubmenu();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            openChildForm(new ListeEnseignant());
+            hidesubmenu();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            openChildForm(new paiementEns());
+            hidesubmenu();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            openChildForm(new presenceEnsg());
+            hidesubmenu();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

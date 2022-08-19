@@ -103,16 +103,13 @@
     </Compile>
     <Compile Include="Class.cs" />
     <Compile Include="Coeffi.cs" />
-
     <Compile Include="Controle.cs" />
-
     <Compile Include="CrudEnseignant.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CrudEnseignant.Designer.cs">
       <DependentUpon>CrudEnseignant.cs</DependentUpon>
     </Compile>
-
     <Compile Include="CrudEtudiant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,19 +143,11 @@
     <Compile Include="ImprimerBulletin.Designer.cs">
       <DependentUpon>ImprimerBulletin.cs</DependentUpon>
     </Compile>
-
-    <Compile Include="Imprimerpayement.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Imprimerpayement.Designer.cs">
-      <DependentUpon>Imprimerpayement.cs</DependentUpon>
-
     <Compile Include="ListeEnseignant.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ListeEnseignant.Designer.cs">
       <DependentUpon>ListeEnseignant.cs</DependentUpon>
-
     </Compile>
     <Compile Include="ListEtudiant.cs">
       <SubType>Form</SubType>
@@ -233,13 +222,8 @@
     <EmbeddedResource Include="ImprimerBulletin.resx">
       <DependentUpon>ImprimerBulletin.cs</DependentUpon>
     </EmbeddedResource>
-
-    <EmbeddedResource Include="Imprimerpayement.resx">
-      <DependentUpon>Imprimerpayement.cs</DependentUpon>
-
     <EmbeddedResource Include="ListeEnseignant.resx">
       <DependentUpon>ListeEnseignant.cs</DependentUpon>
-
     </EmbeddedResource>
     <EmbeddedResource Include="ListEtudiant.resx">
       <DependentUpon>ListEtudiant.cs</DependentUpon>

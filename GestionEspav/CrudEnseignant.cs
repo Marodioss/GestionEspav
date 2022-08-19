@@ -25,12 +25,12 @@ namespace GestionEspav
         private void LoadcomboClass()
         {
 
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT idMatiere , nomMatiere FROM matiere", con.getconnection);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT id , nom FROM matiere", con.getconnection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             comboBox1.DataSource = dt;
-            comboBox1.DisplayMember = "nomMatiere";
-            comboBox1.ValueMember = "idMatiere";
+            comboBox1.DisplayMember = "nom";
+            comboBox1.ValueMember = "id";
         }
 
         private void button1_Click(object sender, EventArgs e)
