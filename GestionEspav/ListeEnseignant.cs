@@ -9,14 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using MySql.Data.MySqlClient;
 namespace GestionEspav
 {
     public partial class ListeEnseignant : Form
     {
         DBclass con = new DBclass();
         Enseignant enseignant = new Enseignant();
-        public ListEnseignant()
+        public ListeEnseignant()
         {
             InitializeComponent();
             showTable();
