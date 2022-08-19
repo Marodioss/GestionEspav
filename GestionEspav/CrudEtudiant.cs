@@ -45,6 +45,18 @@ namespace GestionEspav
             if (opf.ShowDialog() == DialogResult.OK)
                 pictureBox1.Image = Image.FromFile(opf.FileName);
         }
+        bool verify()
+        {
+            if ((textBox1.Text == "") || (textBox2.Text == "") ||
+                (textBox3.Text == "") || (textBox4.Text == "") ||
+                (textBox5.Text == "") || (textBox6.Text == "") ||
+                (pictureBox1.Image == null))
+            {
+                return false;
+            }
+            else
+                return true;
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -56,18 +68,29 @@ namespace GestionEspav
             string telephone = textBox4.Text;
             string whatsapp = textBox5.Text;
             string email = textBox6.Text;
-            MemoryStream ms = new MemoryStream();
-            pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
-            byte[] img = ms.ToArray();
+          
 
 
-
-
-
-
-            if (student.insertStudent(nom, prenom, cin, datei, idclass, telephone, whatsapp, email, img))
+            if (verify())
             {
-                MessageBox.Show("Nouveau Etudiant Ajouter", "Ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+               
+                try
+                {
+                    MemoryStream ms = new MemoryStream();
+                    pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                    byte[] img = ms.ToArray();
+
+
+                    if (student.insertStudent(nom, prenom, cin, datei, idclass, telephone, whatsapp, email, img))
+                    {
+                        MessageBox.Show("Nouveau Etudiant Ajouter", "Ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {

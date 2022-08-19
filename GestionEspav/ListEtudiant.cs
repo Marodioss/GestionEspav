@@ -69,6 +69,18 @@ namespace GestionEspav
             MemoryStream ms = new MemoryStream(img);
             pictureBox1.Image = Image.FromStream(ms);
         }
+        bool verify()
+        {
+            if ((textBox1.Text == "") || (textBox2.Text == "") ||
+                (textBox3.Text == "") || (textBox4.Text == "") ||
+                (textBox5.Text == "") || (textBox6.Text == "") ||
+                (pictureBox1.Image == null))
+            {
+                return false;
+            }
+            else
+                return true;
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -81,33 +93,34 @@ namespace GestionEspav
             string telephone = textBox4.Text;
             string whatsapp = textBox5.Text;
             string email = textBox6.Text;
-            MemoryStream ms = new MemoryStream();
-            pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
-            byte[] img = ms.ToArray();
-            //if (verify())
-            // {
-            // try
+            
+            if (verify())
             {
-                if (student.updateStudent(id, nom, prenom, cin, datei, idclass, telephone, whatsapp, email, img))
+                try
                 {
-                    showTable();
-                    MessageBox.Show("Student data update", "Update Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    button3.PerformClick();
+                    MemoryStream ms = new MemoryStream();
+                    pictureBox1.Image.Save(ms, pictureBox1.Image.RawFormat);
+                    byte[] img = ms.ToArray();
+                    if (student.updateStudent(id, nom, prenom, cin, datei, idclass, telephone, whatsapp, email, img))
+                    {
+                        showTable();
+                        MessageBox.Show("Student data update", "Update Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        button3.PerformClick();
+                    }
                 }
-                //}
-                /*   catch (Exception ex)
+                catch (Exception ex)
 
-                   {
-                       MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                   }
-               }*/
-                else
                 {
-                    MessageBox.Show("Redimentionner la photo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            else
+            {
+                MessageBox.Show("Empty fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
+    
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -120,6 +133,21 @@ namespace GestionEspav
             textBox7.Clear();
             dateTimePicker1.Value = DateTime.Now;
             pictureBox1.Image = null;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(textBox7.Text);
+            //Show a confirmation message before delete the student
+            if (MessageBox.Show("Are you sure you want to remove this student", "Remove Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (student.deleteStudent(id))
+                {
+                    showTable();
+                    MessageBox.Show("Student Removed", "Remove student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    button3.PerformClick();
+                }
+            }
         }
     }
 }

@@ -21,6 +21,16 @@ namespace GestionEspav
             InitializeComponent();
             showTable();
         }
+        bool verify()
+        {
+            if ((textBox1.Text == "") || (textBox2.Text == "") ||
+                (textBox3.Text == ""))
+            {
+                return false;
+            }
+            else
+                return true;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -29,26 +39,33 @@ namespace GestionEspav
             float montant = float.Parse(textBox3.Text);
             string modep = radioButton1.Checked ? "Check" : "Cash";
             DateTime moisF = dateTimePicker2.Value;
-
+            if(verify())
+            { 
             int v = int.Parse(payment.verify(idE, moisD));
 
             if (v == 0)
             {
+                    try
+                    {
 
+                        if (payment.insertPayement(montant, modep, moisD, moisF, idE))
+                        {
+                            MessageBox.Show("Payement Ajouter", "Payement Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            showTable();
+                        }
+                    }
+                    catch (Exception ex)
 
-                if (payment.insertPayement(montant, modep, moisD, moisF, idE))
-                {
-                    MessageBox.Show("Payement Ajouter", "Payement Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    showTable();
+                    {
+                        MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
                 }
-                else
-                {
-                    MessageBox.Show("Empty Field", "Payement ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-                }
-            }
             else
                 MessageBox.Show("Mois deja payé", "Mois deja payé", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+                MessageBox.Show("Empty Field", "Payement ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
         public void showTable()
         {
