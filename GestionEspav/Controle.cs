@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace GestionEspav
 {
-    internal class NotesClass
+    internal class Controle
     {
         DBclass connect = new DBclass();
-        public bool InsertNote(float note, int idmatiere, int idEtudiant)
+        public bool InsertControle(float note, int idmatiere, int idEtudiant)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `notes`(`note`, `idmatiere`, `idEtudiant`) VALUES(@no, @im, @ie )", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO `controle`(`note`, `idEtudiant`, `idMatiere`) VALUES(@no, @ie, @im )", connect.getconnection);
 
             //@na, @pre2
             command.Parameters.Add("@no", MySqlDbType.Float).Value = note;
             command.Parameters.Add("@im", MySqlDbType.Int64).Value = idmatiere;
-            command.Parameters.Add("@ie", MySqlDbType.Int64).Value = idEtudiant;     
+            command.Parameters.Add("@ie", MySqlDbType.Int64).Value = idEtudiant;
             connect.openConnect();
             if (command.ExecuteNonQuery() == 1)
             {

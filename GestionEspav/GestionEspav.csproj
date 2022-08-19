@@ -103,6 +103,7 @@
     </Compile>
     <Compile Include="Class.cs" />
     <Compile Include="Coeffi.cs" />
+    <Compile Include="Controle.cs" />
     <Compile Include="CrudEtudiant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +112,12 @@
     </Compile>
     <Compile Include="DBclass.cs" />
     <Compile Include="Etudiant.cs" />
+    <Compile Include="FichePayement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FichePayement.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +129,12 @@
     </Compile>
     <Compile Include="ImprimerBulletin.Designer.cs">
       <DependentUpon>ImprimerBulletin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Imprimerpayement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Imprimerpayement.Designer.cs">
+      <DependentUpon>Imprimerpayement.cs</DependentUpon>
     </Compile>
     <Compile Include="ListEtudiant.cs">
       <SubType>Form</SubType>
@@ -159,11 +172,18 @@
     <EmbeddedResource Include="CrudEtudiant.resx">
       <DependentUpon>CrudEtudiant.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FichePayement.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>FichePayement.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ImprimerBulletin.resx">
       <DependentUpon>ImprimerBulletin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Imprimerpayement.resx">
+      <DependentUpon>Imprimerpayement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListEtudiant.resx">
       <DependentUpon>ListEtudiant.cs</DependentUpon>

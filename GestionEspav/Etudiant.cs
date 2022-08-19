@@ -76,6 +76,26 @@ namespace GestionEspav
             }
 
         }
+        public bool deleteStudent(int id)
+        {
+            MySqlCommand command = new MySqlCommand("DELETE FROM `etudiant` WHERE `id`=@id", connect.getconnection);
+
+            //@id
+            command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
+
+            connect.openConnect();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                connect.closeConnect();
+                return true;
+            }
+            else
+            {
+                connect.closeConnect();
+                return false;
+            }
+
+        }
         public string getEtudiantNP(string nom, string prenom)
         {
             MySqlCommand command = new MySqlCommand("SELECT id FROM `etudiant` WHERE nom = @nm and prenom = @pr", connect.getconnection);
