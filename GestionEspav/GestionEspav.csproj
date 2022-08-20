@@ -199,6 +199,7 @@
     <Compile Include="reservationMat.Designer.cs">
       <DependentUpon>reservationMat.cs</DependentUpon>
     </Compile>
+    <Compile Include="ResevationM.cs" />
     <EmbeddedResource Include="Buletin.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Buletin.cs</LastGenOutput>
