@@ -12,13 +12,12 @@ namespace GestionEspav
     {
         DBclass connect = new DBclass();
 
-        public bool InsertMatiere(string nom, int idclass)
+        public bool InsertMatiere(string nom)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `matiere`(`nom`, `idclass`) VALUES(@na, @pre)", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO `matiere`(`nom`) VALUES(@na)", connect.getconnection);
 
             //@na, @pre2
             command.Parameters.Add("@na", MySqlDbType.VarChar).Value = nom;
-            command.Parameters.Add("@pre", MySqlDbType.Int64).Value = idclass;
 
             connect.openConnect();
             if (command.ExecuteNonQuery() == 1)

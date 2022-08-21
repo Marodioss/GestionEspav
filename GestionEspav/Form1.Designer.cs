@@ -46,12 +46,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,6 +79,9 @@
             // 
             // panel2
             // 
+            this.panel2.AutoScroll = true;
+            this.panel2.Controls.Add(this.panel7);
+            this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.panel4);
@@ -240,6 +247,38 @@
             this.panel5.Size = new System.Drawing.Size(1157, 706);
             this.panel5.TabIndex = 0;
             // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button11.Location = new System.Drawing.Point(0, 470);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(208, 63);
+            this.button11.TabIndex = 4;
+            this.button11.Text = "Gestion Enseignant";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.button12);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 533);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(208, 95);
+            this.panel7.TabIndex = 5;
+            // 
+            // button12
+            // 
+            this.button12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button12.Location = new System.Drawing.Point(0, 0);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(208, 47);
+            this.button12.TabIndex = 0;
+            this.button12.Text = "Ajouter Matiere";
+            this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -257,6 +296,7 @@
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -280,6 +320,9 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button11;
     }
 }
 

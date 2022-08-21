@@ -21,6 +21,7 @@ namespace GestionEspav
         {
             panel4.Visible = false;
             panel6.Visible = false;
+            panel7.Visible = false;
 
         }
         private void hidesubmenu()
@@ -29,6 +30,8 @@ namespace GestionEspav
                 panel4.Visible = false;
             if (panel6.Visible == true)
                 panel6.Visible = false;
+            if (panel7.Visible == true)
+                panel7.Visible = false;
 
         }
         private Form activeForm = null;
@@ -125,6 +128,12 @@ namespace GestionEspav
         private void button15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            openChildForm(new MatiereCrud());
+            hidesubmenu();
         }
     }
 }
