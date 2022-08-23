@@ -12,10 +12,12 @@ namespace GestionEspav
 {
     public partial class Form1 : Form
     {
+        Etudiant student = new Etudiant();
         public Form1()
         {
             InitializeComponent();
             CostumeDesign();
+            studentCount();
         }
         private void CostumeDesign()
         {
@@ -60,10 +62,19 @@ namespace GestionEspav
             else
                 submenu.Visible = false;
         }
+        private void studentCount()
+        {
+            //Display the values
+            label_totalStd.Text = "Total Etudiant : " + student.totalStudent();
+        label2.Text = "Payement: " + student.totalPayement();
+           label1.Text = "Total Professeur: " + student.totalProfesseur();
+            label3.Text = "Payement: " + student.totalPayementP();
+
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            showsubmenu(panel4);
+            studentCount();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -134,6 +145,23 @@ namespace GestionEspav
         {
             openChildForm(new MatiereCrud());
             hidesubmenu();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            showsubmenu(panel7);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            panel3.Controls.Add(panel5);
         }
     }
 }
