@@ -52,6 +52,9 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
+<Reference Include="Guna.UI2, Version=2.0.3.4, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.4\lib\net40\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.30\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -162,6 +165,12 @@
     <Compile Include="ListEtudiant.Designer.cs">
       <DependentUpon>ListEtudiant.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Materiel.cs" />
     <Compile Include="Matiere.cs" />
     <Compile Include="MatiereCrud.cs">
@@ -206,7 +215,14 @@
     <Compile Include="reservationMat.Designer.cs">
       <DependentUpon>reservationMat.cs</DependentUpon>
     </Compile>
-    <Compile Include="ResevationM.cs" />
+
+    <Compile Include="Splashscreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splashscreen.Designer.cs">
+      <DependentUpon>Splashscreen.cs</DependentUpon>
+    </Compile>
+
     <EmbeddedResource Include="Buletin.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Buletin.cs</LastGenOutput>
@@ -251,6 +267,9 @@
     <EmbeddedResource Include="PayementEtudiant.resx">
       <DependentUpon>PayementEtudiant.cs</DependentUpon>
     </EmbeddedResource>
+	<EmbeddedResource Include="Splashscreen.resx">
+      <DependentUpon>Splashscreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="presenceEnsg.resx">
       <DependentUpon>presenceEnsg.cs</DependentUpon>
     </EmbeddedResource>
@@ -265,6 +284,9 @@
     </Compile>
     <EmbeddedResource Include="reservationMat.resx">
       <DependentUpon>reservationMat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splashscreen.resx">
+      <DependentUpon>Splashscreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
