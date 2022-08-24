@@ -24,6 +24,7 @@ namespace GestionEspav
             panel4.Visible = false;
             panel6.Visible = false;
             panel7.Visible = false;
+            panel8.Visible = false;
 
         }
         private void hidesubmenu()
@@ -34,6 +35,8 @@ namespace GestionEspav
                 panel6.Visible = false;
             if (panel7.Visible == true)
                 panel7.Visible = false;
+            if (panel8.Visible == true)
+                panel8.Visible = false;
 
         }
         private Form activeForm = null;
@@ -169,6 +172,23 @@ namespace GestionEspav
             Login login = new Login();
             this.Hide();
             login.Show();
+        }
+
+        private void button15_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new reservationMat());
+            hidesubmenu();
+        }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            openChildForm(new demandeAcces());
+            hidesubmenu();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            showsubmenu(panel8);
         }
     }
 }

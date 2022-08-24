@@ -32,7 +32,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button18 = new System.Windows.Forms.Button();
+            this.button17 = new System.Windows.Forms.Button();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.button16 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.button14 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -49,35 +56,28 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.button13 = new System.Windows.Forms.Button();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label_totalStd = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label_totalStd = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.button18 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel11.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -119,6 +119,77 @@
             this.panel2.Size = new System.Drawing.Size(206, 706);
             this.panel2.TabIndex = 1;
             // 
+            // button18
+            // 
+            this.button18.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button18.Location = new System.Drawing.Point(0, 854);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(185, 63);
+            this.button18.TabIndex = 9;
+            this.button18.Text = "Exit";
+            this.button18.UseVisualStyleBackColor = false;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
+            // button17
+            // 
+            this.button17.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button17.Location = new System.Drawing.Point(0, 791);
+            this.button17.Name = "button17";
+            this.button17.Size = new System.Drawing.Size(185, 63);
+            this.button17.TabIndex = 8;
+            this.button17.Text = "Dashboard";
+            this.button17.UseVisualStyleBackColor = false;
+            this.button17.Click += new System.EventHandler(this.button17_Click);
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.button16);
+            this.panel8.Controls.Add(this.button15);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 691);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(185, 100);
+            this.panel8.TabIndex = 7;
+            // 
+            // button16
+            // 
+            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button16.Location = new System.Drawing.Point(0, 47);
+            this.button16.Name = "button16";
+            this.button16.Size = new System.Drawing.Size(185, 47);
+            this.button16.TabIndex = 2;
+            this.button16.Text = "Reservation Salle";
+            this.button16.UseVisualStyleBackColor = true;
+            this.button16.Click += new System.EventHandler(this.button16_Click);
+            // 
+            // button15
+            // 
+            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button15.Location = new System.Drawing.Point(0, 0);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(185, 47);
+            this.button15.TabIndex = 1;
+            this.button15.Text = "Reservation Materiels";
+            this.button15.UseVisualStyleBackColor = true;
+            this.button15.Click += new System.EventHandler(this.button15_Click_1);
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button13.Location = new System.Drawing.Point(0, 628);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(185, 63);
+            this.button13.TabIndex = 6;
+            this.button13.Text = "Reservation";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.button14);
@@ -128,6 +199,16 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(185, 95);
             this.panel7.TabIndex = 5;
+            // 
+            // button14
+            // 
+            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button14.Location = new System.Drawing.Point(0, 47);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(185, 47);
+            this.button14.TabIndex = 1;
+            this.button14.Text = "Ajouter Matiere";
+            this.button14.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
@@ -309,71 +390,6 @@
             this.panel5.Size = new System.Drawing.Size(1159, 706);
             this.panel5.TabIndex = 0;
             // 
-            // button13
-            // 
-            this.button13.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button13.Location = new System.Drawing.Point(0, 628);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(185, 63);
-            this.button13.TabIndex = 6;
-            this.button13.Text = "Gestion Matiere";
-            this.button13.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.button16);
-            this.panel8.Controls.Add(this.button15);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 691);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(185, 100);
-            this.panel8.TabIndex = 7;
-            // 
-            // button14
-            // 
-            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button14.Location = new System.Drawing.Point(0, 47);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(185, 47);
-            this.button14.TabIndex = 1;
-            this.button14.Text = "Ajouter Matiere";
-            this.button14.UseVisualStyleBackColor = true;
-            // 
-            // button15
-            // 
-            this.button15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button15.Location = new System.Drawing.Point(0, 0);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(185, 47);
-            this.button15.TabIndex = 1;
-            this.button15.Text = "Ajouter Matiere";
-            this.button15.UseVisualStyleBackColor = true;
-            // 
-            // button16
-            // 
-            this.button16.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button16.Location = new System.Drawing.Point(0, 47);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(185, 47);
-            this.button16.TabIndex = 2;
-            this.button16.Text = "Ajouter Matiere";
-            this.button16.UseVisualStyleBackColor = true;
-            // 
-            // button17
-            // 
-            this.button17.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button17.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button17.Location = new System.Drawing.Point(0, 791);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(185, 63);
-            this.button17.TabIndex = 8;
-            this.button17.Text = "Dashboard";
-            this.button17.UseVisualStyleBackColor = false;
-            this.button17.Click += new System.EventHandler(this.button17_Click);
-            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.pictureBox2);
@@ -385,15 +401,16 @@
             this.panel9.Size = new System.Drawing.Size(1159, 706);
             this.panel9.TabIndex = 0;
             // 
-            // panel10
+            // pictureBox2
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
-            this.panel10.Controls.Add(this.label4);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1159, 123);
-            this.panel10.TabIndex = 0;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 123);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1159, 453);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // panel11
             // 
@@ -408,40 +425,17 @@
             this.panel11.Size = new System.Drawing.Size(1159, 130);
             this.panel11.TabIndex = 1;
             // 
-            // pictureBox2
+            // label3
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 123);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1159, 453);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // label_totalStd
-            // 
-            this.label_totalStd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_totalStd.AutoSize = true;
-            this.label_totalStd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_totalStd.ForeColor = System.Drawing.Color.White;
-            this.label_totalStd.Location = new System.Drawing.Point(53, 22);
-            this.label_totalStd.Name = "label_totalStd";
-            this.label_totalStd.Size = new System.Drawing.Size(170, 25);
-            this.label_totalStd.TabIndex = 3;
-            this.label_totalStd.Text = "Total Etudiants :";
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(794, 22);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Payement : ";
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(794, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(127, 25);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Payement : ";
             // 
             // label1
             // 
@@ -455,17 +449,39 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Total Professeur :";
             // 
-            // label3
+            // label2
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(794, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 25);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Payement : ";
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(794, 22);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 25);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Payement : ";
+            // 
+            // label_totalStd
+            // 
+            this.label_totalStd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_totalStd.AutoSize = true;
+            this.label_totalStd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_totalStd.ForeColor = System.Drawing.Color.White;
+            this.label_totalStd.Location = new System.Drawing.Point(53, 22);
+            this.label_totalStd.Name = "label_totalStd";
+            this.label_totalStd.Size = new System.Drawing.Size(170, 25);
+            this.label_totalStd.TabIndex = 3;
+            this.label_totalStd.Text = "Total Etudiants :";
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel10.Controls.Add(this.label4);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(1159, 123);
+            this.panel10.TabIndex = 0;
             // 
             // label4
             // 
@@ -478,19 +494,6 @@
             this.label4.Size = new System.Drawing.Size(276, 25);
             this.label4.TabIndex = 8;
             this.label4.Text = "Application Desktop Espav ";
-            // 
-            // button18
-            // 
-            this.button18.BackColor = System.Drawing.Color.RoyalBlue;
-            this.button18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button18.Location = new System.Drawing.Point(0, 854);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(185, 63);
-            this.button18.TabIndex = 9;
-            this.button18.Text = "Exit";
-            this.button18.UseVisualStyleBackColor = false;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // Form1
             // 
@@ -506,18 +509,18 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel8.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }

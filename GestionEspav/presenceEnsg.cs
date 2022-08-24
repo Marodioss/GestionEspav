@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace GestionEspav
@@ -24,6 +25,7 @@ namespace GestionEspav
             InitializeComponent();
             showTable();
         }
+       
         public void showTable()
         {
             dataGridView1.DataSource = presenceEns.getPresenceList(new MySqlCommand("SELECT * FROM `presenceens`"));
