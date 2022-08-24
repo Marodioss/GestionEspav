@@ -123,6 +123,13 @@
       <DependentUpon>CrudEtudiant.cs</DependentUpon>
     </Compile>
     <Compile Include="DBclass.cs" />
+    <Compile Include="DemandeAcce.cs" />
+    <Compile Include="demandeAcces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="demandeAcces.Designer.cs">
+      <DependentUpon>demandeAcces.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enseignant.cs" />
     <Compile Include="Etudiant.cs" />
     <Compile Include="FichePayement.cs">
@@ -211,12 +218,14 @@
     <Compile Include="reservationMat.Designer.cs">
       <DependentUpon>reservationMat.cs</DependentUpon>
     </Compile>
+
     <Compile Include="Splashscreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Splashscreen.Designer.cs">
       <DependentUpon>Splashscreen.cs</DependentUpon>
     </Compile>
+
     <EmbeddedResource Include="Buletin.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Buletin.cs</LastGenOutput>
@@ -226,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrudEtudiant.resx">
       <DependentUpon>CrudEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="demandeAcces.resx">
+      <DependentUpon>demandeAcces.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FichePayement.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
