@@ -129,7 +129,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(933, 720);
+            this.dataGridView1.Size = new System.Drawing.Size(1084, 720);
             this.dataGridView1.TabIndex = 62;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -230,20 +230,22 @@
             // textBox5
             // 
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(46, 96);
+            this.textBox5.Location = new System.Drawing.Point(51, 470);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(70, 33);
             this.textBox5.TabIndex = 74;
+            this.textBox5.Visible = false;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(48, 77);
+            this.label8.Location = new System.Drawing.Point(53, 451);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(20, 16);
             this.label8.TabIndex = 75;
             this.label8.Text = "ID";
+            this.label8.Visible = false;
             // 
             // radioButton2
             // 
@@ -269,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1454, 761);
+            this.ClientSize = new System.Drawing.Size(1605, 761);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.label8);

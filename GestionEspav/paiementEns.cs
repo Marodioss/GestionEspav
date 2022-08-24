@@ -38,7 +38,7 @@ namespace GestionEspav
             DateTime dateF = dateTimePicker2.Value;
             int idenseignant = int.Parse(enseignant.getEnseignantNP(textBox4.Text, textBox1.Text));
             float TotalHeure = float.Parse(paiementEnsg.requpTotalHeure(idenseignant, dateD, dateF));
-            string type = radioButton1.Checked ? "oui" : "non";
+            string type = radioButton1.Checked ? "Heure" : "Forfait";
             float prixHeure = float.Parse(textBox2.Text);
             float montant = int.Parse(textBox3.Text);
             float v = int.Parse(paiementEnsg.verify(idenseignant, dateD));
@@ -70,7 +70,7 @@ namespace GestionEspav
             DateTime dateF = dateTimePicker2.Value;
             int idenseignant = int.Parse(enseignant.getEnseignantNP(textBox4.Text, textBox1.Text));
             float TotalHeure = float.Parse(paiementEnsg.requpTotalHeure(idenseignant, dateD, dateF));
-            string type = radioButton1.Checked ? "Heure" : "forfait";
+            string type = radioButton1.Checked ? "Heure" : "Forfait";
             float prixHeure = float.Parse(textBox2.Text);
             float montant;
             if (type == "Heure")

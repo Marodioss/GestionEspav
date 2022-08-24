@@ -117,6 +117,13 @@
       <DependentUpon>CrudEtudiant.cs</DependentUpon>
     </Compile>
     <Compile Include="DBclass.cs" />
+    <Compile Include="DemandeAcce.cs" />
+    <Compile Include="demandeAcces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="demandeAcces.Designer.cs">
+      <DependentUpon>demandeAcces.cs</DependentUpon>
+    </Compile>
     <Compile Include="Enseignant.cs" />
     <Compile Include="Etudiant.cs" />
     <Compile Include="FichePayement.cs">
@@ -209,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CrudEtudiant.resx">
       <DependentUpon>CrudEtudiant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="demandeAcces.resx">
+      <DependentUpon>demandeAcces.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FichePayement.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

@@ -48,7 +48,7 @@ namespace GestionEspav
             int nbrItem = int.Parse(textBox3.Text);
             int a = int.Parse(textBox2.Text);
             string retourne = radioButton1.Checked ? "Oui" : "Non";
-            if (nbrItem < a)
+            if (nbrItem <= a)
             {
                 if (resevationM.insertReservationMat(nom, prenom, dateL, dateR, idMateriel, nbrItem, retourne))
                 {
@@ -76,7 +76,7 @@ namespace GestionEspav
             dateTimePicker1.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             dateTimePicker2.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
            
-            comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+         //   comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             
             textBox3.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             String r = dataGridView1.CurrentRow.Cells[7].Value.ToString();
