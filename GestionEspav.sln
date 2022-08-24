@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionEspav", "GestionEspav\GestionEspav.csproj", "{DE569DBC-641E-481A-8F42-820AA43DA2BA}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Espav", "Espav\Espav.vdproj", "{96EA2EF1-7FA0-486C-8CEA-2E07FD8C5545}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{DE569DBC-641E-481A-8F42-820AA43DA2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE569DBC-641E-481A-8F42-820AA43DA2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE569DBC-641E-481A-8F42-820AA43DA2BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96EA2EF1-7FA0-486C-8CEA-2E07FD8C5545}.Debug|Any CPU.ActiveCfg = Debug
+		{96EA2EF1-7FA0-486C-8CEA-2E07FD8C5545}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

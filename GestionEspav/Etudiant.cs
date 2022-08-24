@@ -96,6 +96,30 @@ namespace GestionEspav
             }
 
         }
+        public string exeCount(string query)
+        {
+            MySqlCommand command = new MySqlCommand(query, connect.getconnection);
+            connect.openConnect();
+            string count = command.ExecuteScalar().ToString();
+            connect.closeConnect();
+            return count;
+        }
+        public string totalStudent()
+        {
+            return exeCount("SELECT COUNT(*) FROM etudiant");
+        }
+        public string totalPayement()
+        {
+            return exeCount("SELECT sum(montant) FROM payement");
+        }
+        public string totalProfesseur()
+        {
+            return exeCount("SELECT COUNT(*) FROM enseignant");
+        }
+        public string totalPayementP()
+        {
+            return exeCount("SELECT sum(montant) FROM payementens");
+        }
         public string getEtudiantNP(string nom, string prenom)
         {
             MySqlCommand command = new MySqlCommand("SELECT id FROM `etudiant` WHERE nom = @nm and prenom = @pr", connect.getconnection);

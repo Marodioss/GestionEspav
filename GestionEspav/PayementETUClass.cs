@@ -45,11 +45,11 @@ namespace GestionEspav
             adapter.Fill(table);
             return table;
         }
-        public string verify(int id, DateTime dateverify)
+        public string verifyM(int id, DateTime dateverify)
         {
             MySqlCommand command = new MySqlCommand("select count(statut) from payement where Etudiantid = @ide and @dt BETWEEN moisD and moisF; ", connect.getconnection);
             command.Parameters.Add("@ide", MySqlDbType.Int64).Value = id;
-            command.Parameters.Add("@dt", MySqlDbType.VarChar).Value = dateverify;
+            command.Parameters.Add("@dt", MySqlDbType.Date).Value = dateverify;
             MySqlDataReader reader;
             connect.openConnect();
             reader = command.ExecuteReader();
@@ -66,7 +66,6 @@ namespace GestionEspav
                 reader.Close();
                 connect.closeConnect();
                 return null;
-
             }
         }
     }

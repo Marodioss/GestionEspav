@@ -12,15 +12,18 @@ namespace GestionEspav
 {
     public partial class Form1 : Form
     {
+        Etudiant student = new Etudiant();
         public Form1()
         {
             InitializeComponent();
             CostumeDesign();
+            studentCount();
         }
         private void CostumeDesign()
         {
             panel4.Visible = false;
             panel6.Visible = false;
+            panel7.Visible = false;
 
         }
         private void hidesubmenu()
@@ -29,6 +32,8 @@ namespace GestionEspav
                 panel4.Visible = false;
             if (panel6.Visible == true)
                 panel6.Visible = false;
+            if (panel7.Visible == true)
+                panel7.Visible = false;
 
         }
         private Form activeForm = null;
@@ -57,10 +62,19 @@ namespace GestionEspav
             else
                 submenu.Visible = false;
         }
+        private void studentCount()
+        {
+            //Display the values
+            label_totalStd.Text = "Total Etudiant : " + student.totalStudent();
+        label2.Text = "Payement: " + student.totalPayement();
+           label1.Text = "Total Professeur: " + student.totalProfesseur();
+            label3.Text = "Payement: " + student.totalPayementP();
+
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            showsubmenu(panel4);
+            studentCount();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -125,6 +139,36 @@ namespace GestionEspav
         private void button15_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            openChildForm(new MatiereCrud());
+            hidesubmenu();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            showsubmenu(panel7);
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            panel3.Controls.Add(panel5);
+        }
+
+        private void button18_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.Show();
         }
     }
 }

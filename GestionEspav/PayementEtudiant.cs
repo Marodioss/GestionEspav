@@ -34,17 +34,18 @@ namespace GestionEspav
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int idE = int.Parse(student.getEtudiantNP(textBox1.Text, textBox2.Text));
+           
             DateTime moisD = dateTimePicker1.Value;
-            float montant = float.Parse(textBox3.Text);
             string modep = radioButton1.Checked ? "Check" : "Cash";
             DateTime moisF = dateTimePicker2.Value;
-            if(verify())
-            { 
-            int v = int.Parse(payment.verify(idE, moisD));
 
-            if (v == 0)
+            if (verify())
             {
+                float montant = float.Parse(textBox3.Text);
+                int idE = int.Parse(student.getEtudiantNP(textBox1.Text, textBox2.Text));
+                int v = int.Parse(payment.verifyM(idE, moisD));
+                if (v == 0)
+                {
                     try
                     {
 
@@ -61,11 +62,12 @@ namespace GestionEspav
                     }
 
                 }
-            else
-                MessageBox.Show("Mois deja payé", "Mois deja payé", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                else
+                    MessageBox.Show("Mois deja payé", "Mois deja payé", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
-                MessageBox.Show("Empty Field", "Payement ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Remplissez les champs", "Champ vide", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
         public void showTable()
         {

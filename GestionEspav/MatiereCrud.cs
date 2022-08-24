@@ -42,13 +42,22 @@ namespace GestionEspav
             dataGridView1.DataSource = matiere.getMatiereList(new MySqlCommand("select m.nom , c.coff ,cl.specialiter from matiere m inner join coefficient c on (m.id = c.idmatiere) inner join class cl on (c.idclass = cl.id);"));
 
         }
+        bool verify()
+        {
+            if ((textBox1.Text == "") || (textBox2.Text == ""))
+            {
+                return false;
+            }
+            else
+                return true;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             String Nom = textBox1.Text;
             int coff = int.Parse(textBox2.Text);
             int idc = int.Parse(comboBox1.GetItemText(comboBox1.SelectedValue));
-            if (matiere.InsertMatiere(Nom, idc))
+            if (matiere.InsertMatiere(Nom))
             {
                 int idM = int.Parse(matiere.getMatiereId(Nom));
 

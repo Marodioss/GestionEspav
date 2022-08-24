@@ -16,7 +16,8 @@ namespace GestionEspav
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new demandeAcces());
+            Application.Run(new ImprimerBulletin());
+
         }
     }
 }
