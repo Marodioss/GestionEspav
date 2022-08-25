@@ -39,7 +39,6 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -82,6 +81,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.DarkViolet;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -116,17 +116,18 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 65);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 706);
+            this.panel2.Size = new System.Drawing.Size(265, 706);
             this.panel2.TabIndex = 1;
             // 
             // button18
             // 
-            this.button18.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.button18.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button18.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button18.Location = new System.Drawing.Point(0, 854);
+            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.button18.Location = new System.Drawing.Point(0, 806);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(185, 63);
+            this.button18.Size = new System.Drawing.Size(244, 63);
             this.button18.TabIndex = 9;
             this.button18.Text = "Exit";
             this.button18.UseVisualStyleBackColor = false;
@@ -134,12 +135,13 @@
             // 
             // button17
             // 
-            this.button17.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button17.BackColor = System.Drawing.Color.DarkViolet;
             this.button17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button17.Location = new System.Drawing.Point(0, 791);
+            this.button17.Location = new System.Drawing.Point(0, 743);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(185, 63);
+            this.button17.Size = new System.Drawing.Size(244, 63);
             this.button17.TabIndex = 8;
             this.button17.Text = "Dashboard";
             this.button17.UseVisualStyleBackColor = false;
@@ -150,41 +152,48 @@
             this.panel8.Controls.Add(this.button16);
             this.panel8.Controls.Add(this.button15);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 691);
+            this.panel8.Location = new System.Drawing.Point(0, 643);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(185, 100);
+            this.panel8.Size = new System.Drawing.Size(244, 100);
             this.panel8.TabIndex = 7;
             // 
             // button16
             // 
+            this.button16.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button16.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.ForeColor = System.Drawing.Color.DarkViolet;
             this.button16.Location = new System.Drawing.Point(0, 47);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(185, 47);
+            this.button16.Size = new System.Drawing.Size(244, 47);
             this.button16.TabIndex = 2;
             this.button16.Text = "Reservation Salle";
-            this.button16.UseVisualStyleBackColor = true;
+            this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
             // button15
             // 
+            this.button15.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.Color.DarkViolet;
             this.button15.Location = new System.Drawing.Point(0, 0);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(185, 47);
+            this.button15.Size = new System.Drawing.Size(244, 47);
             this.button15.TabIndex = 1;
             this.button15.Text = "Reservation Materiels";
-            this.button15.UseVisualStyleBackColor = true;
+            this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click_1);
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button13.BackColor = System.Drawing.Color.DarkViolet;
             this.button13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button13.Location = new System.Drawing.Point(0, 628);
+            this.button13.Location = new System.Drawing.Point(0, 580);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(185, 63);
+            this.button13.Size = new System.Drawing.Size(244, 63);
             this.button13.TabIndex = 6;
             this.button13.Text = "Reservation";
             this.button13.UseVisualStyleBackColor = false;
@@ -192,43 +201,36 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.button14);
             this.panel7.Controls.Add(this.button12);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 533);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(185, 95);
+            this.panel7.Size = new System.Drawing.Size(244, 47);
             this.panel7.TabIndex = 5;
-            // 
-            // button14
-            // 
-            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button14.Location = new System.Drawing.Point(0, 47);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(185, 47);
-            this.button14.TabIndex = 1;
-            this.button14.Text = "Ajouter Matiere";
-            this.button14.UseVisualStyleBackColor = true;
             // 
             // button12
             // 
+            this.button12.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.DarkViolet;
             this.button12.Location = new System.Drawing.Point(0, 0);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(185, 47);
+            this.button12.Size = new System.Drawing.Size(244, 47);
             this.button12.TabIndex = 0;
             this.button12.Text = "Ajouter Matiere";
-            this.button12.UseVisualStyleBackColor = true;
+            this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button11.BackColor = System.Drawing.Color.DarkViolet;
             this.button11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button11.Location = new System.Drawing.Point(0, 470);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(185, 63);
+            this.button11.Size = new System.Drawing.Size(244, 63);
             this.button11.TabIndex = 4;
             this.button11.Text = "Gestion Matiere";
             this.button11.UseVisualStyleBackColor = false;
@@ -243,61 +245,74 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 299);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(185, 171);
+            this.panel6.Size = new System.Drawing.Size(244, 171);
             this.panel6.TabIndex = 3;
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.DarkViolet;
             this.button7.Location = new System.Drawing.Point(0, 129);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(185, 43);
+            this.button7.Size = new System.Drawing.Size(244, 43);
             this.button7.TabIndex = 7;
             this.button7.Text = "Présence";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button8
             // 
+            this.button8.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.DarkViolet;
             this.button8.Location = new System.Drawing.Point(0, 86);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(185, 43);
+            this.button8.Size = new System.Drawing.Size(244, 43);
             this.button8.TabIndex = 6;
             this.button8.Text = "Payement Enseignant";
-            this.button8.UseVisualStyleBackColor = true;
+            this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
+            this.button9.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.DarkViolet;
             this.button9.Location = new System.Drawing.Point(0, 43);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(185, 43);
+            this.button9.Size = new System.Drawing.Size(244, 43);
             this.button9.TabIndex = 5;
             this.button9.Text = "List des Enseignants";
-            this.button9.UseVisualStyleBackColor = true;
+            this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button10
             // 
+            this.button10.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.DarkViolet;
             this.button10.Location = new System.Drawing.Point(0, 0);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(185, 43);
+            this.button10.Size = new System.Drawing.Size(244, 43);
             this.button10.TabIndex = 4;
             this.button10.Text = "Ajouter Enseignant";
-            this.button10.UseVisualStyleBackColor = true;
+            this.button10.UseVisualStyleBackColor = false;
             this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button6.BackColor = System.Drawing.Color.DarkViolet;
             this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button6.Location = new System.Drawing.Point(0, 236);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(185, 63);
+            this.button6.Size = new System.Drawing.Size(244, 63);
             this.button6.TabIndex = 2;
             this.button6.Text = "Gestion Enseignant";
             this.button6.UseVisualStyleBackColor = false;
@@ -312,61 +327,74 @@
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 63);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(185, 173);
+            this.panel4.Size = new System.Drawing.Size(244, 173);
             this.panel4.TabIndex = 1;
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.DarkViolet;
             this.button5.Location = new System.Drawing.Point(0, 129);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(185, 43);
+            this.button5.Size = new System.Drawing.Size(244, 43);
             this.button5.TabIndex = 3;
             this.button5.Text = "Notes";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.DarkViolet;
             this.button4.Location = new System.Drawing.Point(0, 86);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(185, 43);
+            this.button4.Size = new System.Drawing.Size(244, 43);
             this.button4.TabIndex = 2;
             this.button4.Text = "Payement Etudiant";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.DarkViolet;
             this.button3.Location = new System.Drawing.Point(0, 43);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(185, 43);
+            this.button3.Size = new System.Drawing.Size(244, 43);
             this.button3.TabIndex = 1;
             this.button3.Text = "List des Etudiants";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.DarkViolet;
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 43);
+            this.button2.Size = new System.Drawing.Size(244, 43);
             this.button2.TabIndex = 0;
             this.button2.Text = "Ajouter Etudiant";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.BackColor = System.Drawing.Color.DarkViolet;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 63);
+            this.button1.Size = new System.Drawing.Size(244, 63);
             this.button1.TabIndex = 0;
             this.button1.Text = "Gestion Etudiant";
             this.button1.UseVisualStyleBackColor = false;
@@ -376,9 +404,9 @@
             // 
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(206, 65);
+            this.panel3.Location = new System.Drawing.Point(265, 65);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1159, 706);
+            this.panel3.Size = new System.Drawing.Size(1100, 706);
             this.panel3.TabIndex = 2;
             // 
             // panel5
@@ -387,7 +415,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1159, 706);
+            this.panel5.Size = new System.Drawing.Size(1100, 706);
             this.panel5.TabIndex = 0;
             // 
             // panel9
@@ -398,7 +426,7 @@
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(0, 0);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1159, 706);
+            this.panel9.Size = new System.Drawing.Size(1100, 706);
             this.panel9.TabIndex = 0;
             // 
             // pictureBox2
@@ -407,14 +435,14 @@
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 123);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1159, 453);
+            this.pictureBox2.Size = new System.Drawing.Size(1100, 453);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel11.Controls.Add(this.label3);
             this.panel11.Controls.Add(this.label1);
             this.panel11.Controls.Add(this.label2);
@@ -422,7 +450,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel11.Location = new System.Drawing.Point(0, 576);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1159, 130);
+            this.panel11.Size = new System.Drawing.Size(1100, 130);
             this.panel11.TabIndex = 1;
             // 
             // label3
@@ -430,7 +458,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label3.Location = new System.Drawing.Point(794, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 25);
@@ -442,7 +470,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label1.Location = new System.Drawing.Point(53, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(184, 25);
@@ -454,7 +482,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label2.Location = new System.Drawing.Point(794, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(127, 25);
@@ -466,7 +494,7 @@
             this.label_totalStd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label_totalStd.AutoSize = true;
             this.label_totalStd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_totalStd.ForeColor = System.Drawing.Color.White;
+            this.label_totalStd.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.label_totalStd.Location = new System.Drawing.Point(53, 22);
             this.label_totalStd.Name = "label_totalStd";
             this.label_totalStd.Size = new System.Drawing.Size(170, 25);
@@ -475,25 +503,25 @@
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(71)))), ((int)(((byte)(160)))));
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.panel10.Controls.Add(this.label4);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(1159, 123);
+            this.panel10.Size = new System.Drawing.Size(1100, 123);
             this.panel10.TabIndex = 0;
             // 
             // label4
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(418, 44);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.label4.Location = new System.Drawing.Point(358, 35);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(276, 25);
+            this.label4.Size = new System.Drawing.Size(450, 39);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Application Desktop Espav ";
+            this.label4.Text = "Application Gestion Espav ";
             // 
             // Form1
             // 
@@ -552,7 +580,6 @@
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel11;

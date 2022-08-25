@@ -21,18 +21,18 @@ namespace GestionEspav
             adapter.Fill(table);
             return table;
         }
-        public bool updateReservation(int id, String nom, String prenom, DateTime dateL, DateTime dateR, int idMateriel, int nbrItem, String retourne)
+        public bool updateReservation(int id, String nom, String prenom, DateTime dateL, DateTime dateR, int nbrItem, String retourne)
         {
            // MySqlCommand command = new MySqlCommand("UPDATE `enseignant` SET `nom`=@na,`prenom`=@pre,`cin`=@ci,`idmE`=@mat,`telephone`=@tel,`whatsapp`=@wts,`email`=@em,`photo`=@img WHERE  `id`= @id", connect.getconnection);
             //
-            MySqlCommand command = new MySqlCommand("UPDATE `reservationMat` SET `nom` = @nm, `prenom` = @pr, `dateL` = @dl, `dateR` = @dr, `idMateriel` = @im, `nbrItem` = @nbr, `retourne` = @rt  WHERE `id` = @id", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("UPDATE `reservationMat` SET `nom` = @nm, `prenom` = @pr, `dateL` = @dl, `dateR` = @dr, `nbrItem` = @nbr, `retourne` = @rt  WHERE `id` = @id", connect.getconnection);
            
             command.Parameters.Add("@id", MySqlDbType.Int64).Value = id;
             command.Parameters.Add("@nm", MySqlDbType.String).Value = nom;
             command.Parameters.Add("@pr", MySqlDbType.String).Value = prenom;
             command.Parameters.Add("@dl", MySqlDbType.Date).Value = dateL;
             command.Parameters.Add("@dr", MySqlDbType.Date).Value = dateR;
-            command.Parameters.Add("@im", MySqlDbType.Int64).Value = idMateriel;
+          //  command.Parameters.Add("@im", MySqlDbType.Int64).Value = idMateriel;
             command.Parameters.Add("@nbr", MySqlDbType.Int64).Value = nbrItem;
             command.Parameters.Add("@rt", MySqlDbType.String).Value = retourne;
 
@@ -72,6 +72,30 @@ namespace GestionEspav
 
             }
         }
+        public string getMaterielNom(String id)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT nomMateriel FROM `materiels` WHERE id = @nm", connect.getconnection);
+            command.Parameters.Add("@nm", MySqlDbType.String).Value = id;
+
+            MySqlDataReader reader;
+            connect.openConnect();
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                string i = reader["nomMateriel"].ToString();
+                reader.Close();
+                connect.closeConnect();
+                return i;
+
+            }
+            else
+            {
+                reader.Close();
+                connect.closeConnect();
+                return null;
+
+            }
+        }
         public String requpNbrMatRest(String nomMateriel)
         {
             MySqlCommand command = new MySqlCommand("select nbrUnite from materiels where nomMateriel = @ide; ", connect.getconnection);
@@ -98,7 +122,7 @@ namespace GestionEspav
         }
         public String requpNbrMatRes(int idMateriel)
         {
-            MySqlCommand command = new MySqlCommand("select sum(nbrItem) from reservationmat where idMateriel = @ide;", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("select sum(nbrItem) from reservationmat where idMateriel = @ide and retourne = 'Non' ;", connect.getconnection);
             command.Parameters.Add("@ide", MySqlDbType.Int64).Value = idMateriel;
 
 
@@ -120,6 +144,32 @@ namespace GestionEspav
                 return null;
             }
         }
+        
+        public String requpNbrMatRetour(int idMateriel)
+        {
+            MySqlCommand command = new MySqlCommand("select sum(nbrItem) from reservationmat where idMateriel = @ide and retourne = 'Oui' ;", connect.getconnection);
+            command.Parameters.Add("@ide", MySqlDbType.Int64).Value = idMateriel;
+
+
+            MySqlDataReader reader;
+            connect.openConnect();
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                String ve = reader["sum(nbrItem)"].ToString();
+                reader.Close();
+                connect.closeConnect();
+                return ve;
+
+            }
+            else
+            {
+                reader.Close();
+                connect.closeConnect();
+                return null;
+            }
+        }
+
         public bool insertReservationMat(String nom, String prenom, DateTime dateL, DateTime dateR, int idMateriel, int nbrItem, String retourne)
         {
             MySqlCommand command = new MySqlCommand("INSERT INTO `reservationMat`(`nom`, `prenom`, `dateL`, `dateR`, `idMateriel`, `nbrItem`,`retourne`)" +
