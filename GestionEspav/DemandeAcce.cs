@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Menu;
 
 namespace GestionEspav
 {
@@ -91,19 +92,19 @@ namespace GestionEspav
                 return null;
             }
         }
-        public bool updateReservationSalle(String nom, String prenom, DateTime dateR, DateTime dateH, int idMateriel,
-                                       int nbrItem, String nomParticip, String chefEquipe, float duree, String natureTrav, String salle)
+        public bool updateReservationSalle(int id, String nom, String prenom, DateTime dateR, DateTime dateH,
+                                        String nomParticip, String chefEquipe, float duree, String natureTrav, String salle)
         {
            
             MySqlCommand command = new MySqlCommand("UPDATE `reservationsalle` SET `nom` = @nm, `prenom` = @pr, `dateR` = @dr, `dateH` = @dh," +
-                " `idMateriel` = @im, `nbrItem` = @nbr, `nomParticip` = @np, `chefEquipe` = @ce, `duree` = @dur, `natureTrav` = @nt, `salle` = @sl  WHERE `id` = @id", connect.getconnection);
-
+                " `nomParticip` = @np, `chefEquipe` = @ce, `duree` = @dur, `natureTrav` = @nt, `salle` = @sl  WHERE `id` = @id", connect.getconnection);
+            command.Parameters.Add("@id", MySqlDbType.Int64).Value = id;
             command.Parameters.Add("@nm", MySqlDbType.String).Value = nom;
             command.Parameters.Add("@pr", MySqlDbType.String).Value = prenom;
             command.Parameters.Add("@dr", MySqlDbType.Date).Value = dateR;
             command.Parameters.Add("@dh", MySqlDbType.Date).Value = dateH;
-            command.Parameters.Add("@im", MySqlDbType.Int64).Value = idMateriel;
-            command.Parameters.Add("@nbr", MySqlDbType.Int64).Value = nbrItem;
+           // command.Parameters.Add("@im", MySqlDbType.Int64).Value = idMateriel;
+           // command.Parameters.Add("@nbr", MySqlDbType.Int64).Value = nbrItem;
             command.Parameters.Add("@np", MySqlDbType.String).Value = nomParticip;
             command.Parameters.Add("@ce", MySqlDbType.String).Value = chefEquipe;
             command.Parameters.Add("@dur", MySqlDbType.Float).Value = duree;
@@ -123,18 +124,17 @@ namespace GestionEspav
                 return false;
             }
         }
-        public bool insertDemandeAcce(String nom, String prenom, DateTime dateR, DateTime dateH, int idMateriel,
-            int nbrItem, String nomParticip, String chefEquipe, float duree,String natureTrav, String salle)
+        public bool insertDemandeAcce(String nom, String prenom, DateTime dateR, DateTime dateH, String nomParticip, String chefEquipe, float duree,String natureTrav, String salle)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `reservationsalle`(`nom`, `prenom`, `dateR`, `dateH`, `idMateriel`, `nbrItem`, `nomParticip`, `chefEquipe`, `duree`, `natureTrav`, `salle`) VALUES (@nm,@pr,@dr,@dh,@im,@ni,@np,@ce,@dur,@nt,@sl)", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO `reservationsalle`(`nom`, `prenom`, `dateR`, `dateH`, `nomParticip`, `chefEquipe`, `duree`, `natureTrav`, `salle`) VALUES (@nm,@pr,@dr,@dh,@np,@ce,@dur,@nt,@sl)", connect.getconnection);
 
             // @nm,@pr,@dr,@dh,@im,@ni,@np,@ce,@dur,@nt,@sl
             command.Parameters.Add("@nm", MySqlDbType.String).Value = nom;
             command.Parameters.Add("@pr", MySqlDbType.String).Value = prenom;
             command.Parameters.Add("@dr", MySqlDbType.Date).Value = dateR;
             command.Parameters.Add("@dh", MySqlDbType.Date).Value = dateH;
-            command.Parameters.Add("@im", MySqlDbType.Int64).Value = idMateriel;
-            command.Parameters.Add("@ni", MySqlDbType.Int64).Value = nbrItem;
+          //  command.Parameters.Add("@im", MySqlDbType.Int64).Value = idMateriel;
+          //  command.Parameters.Add("@ni", MySqlDbType.Int64).Value = nbrItem;
             command.Parameters.Add("@np", MySqlDbType.String).Value = nomParticip;
             command.Parameters.Add("@ce", MySqlDbType.String).Value = chefEquipe;
             command.Parameters.Add("@dur", MySqlDbType.Float).Value = duree;
