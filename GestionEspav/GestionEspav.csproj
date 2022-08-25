@@ -52,7 +52,7 @@
     <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Hash.xxHash.1.0.6\lib\net46\K4os.Hash.xxHash.dll</HintPath>
     </Reference>
-<Reference Include="Guna.UI2, Version=2.0.3.4, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
+    <Reference Include="Guna.UI2, Version=2.0.3.4, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
@@ -165,7 +165,7 @@
     <Compile Include="ListEtudiant.Designer.cs">
       <DependentUpon>ListEtudiant.cs</DependentUpon>
     </Compile>
-<Compile Include="Login.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
@@ -193,6 +193,12 @@
       <DependentUpon>paiementEns.cs</DependentUpon>
     </Compile>
     <Compile Include="PaiementEnsg.cs" />
+    <Compile Include="PaimentImprimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaimentImprimer.Designer.cs">
+      <DependentUpon>PaimentImprimer.cs</DependentUpon>
+    </Compile>
     <Compile Include="PayementETUClass.cs" />
     <Compile Include="PayementEtudiant.cs">
       <SubType>Form</SubType>
@@ -215,7 +221,7 @@
     <Compile Include="reservationMat.Designer.cs">
       <DependentUpon>reservationMat.cs</DependentUpon>
     </Compile>
-	<Compile Include="Splashscreen.cs">
+    <Compile Include="Splashscreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Splashscreen.Designer.cs">
@@ -263,10 +269,13 @@
     <EmbeddedResource Include="paiementEns.resx">
       <DependentUpon>paiementEns.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PaimentImprimer.resx">
+      <DependentUpon>PaimentImprimer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PayementEtudiant.resx">
       <DependentUpon>PayementEtudiant.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="Splashscreen.resx">
+    <EmbeddedResource Include="Splashscreen.resx">
       <DependentUpon>Splashscreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="presenceEnsg.resx">
@@ -284,7 +293,7 @@
     <EmbeddedResource Include="reservationMat.resx">
       <DependentUpon>reservationMat.cs</DependentUpon>
     </EmbeddedResource>
-	<EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
