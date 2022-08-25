@@ -75,9 +75,9 @@ namespace GestionEspav
             textBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             dateTimePicker1.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             dateTimePicker2.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-           
-         //   comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            
+
+            String i = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            comboBox1.Text = resevationM.getMaterielNom(i);
             textBox3.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             String r = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             if(r == "Oui")
@@ -103,12 +103,32 @@ namespace GestionEspav
         private void button2_Click(object sender, EventArgs e)
         {
             int idMateriel = int.Parse(resevationM.getMaterielNP(comboBox1.Text));
-           // int nbrItem = int.Parse(textBox3.Text);
+           
+            int nbrMRetour = int.Parse(resevationM.requpNbrMatRetour(idMateriel));
 
-            int nbrMS = int.Parse(resevationM.requpNbrMatRest(comboBox1.Text));
-            int nbrMR = int.Parse(resevationM.requpNbrMatRes(idMateriel));
-            int resNbrMatR = nbrMS - nbrMR;
-            textBox2.Text = resNbrMatR.ToString();
+            int nbrMStock = int.Parse(resevationM.requpNbrMatRest(comboBox1.Text));
+            
+           int nbrMReserve = int.Parse(resevationM.requpNbrMatRes(idMateriel));
+
+            if(nbrMRetour > nbrMReserve )
+            {
+                MessageBox.Show("Erreur", "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                nbrMStock -= nbrMReserve;
+                 nbrMStock += nbrMRetour; 
+                textBox2.Text = nbrMStock.ToString();
+            }
+            if(nbrMReserve == 0)
+            {
+                //nbrMStock -= nbrMReserve;
+              //  nbrMStock += nbrMRetour;
+                textBox2.Text = nbrMStock.ToString();
+            }
+            
+            //textBox2.Text = nbrMReserve.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -117,17 +137,19 @@ namespace GestionEspav
             DateTime dateR = dateTimePicker2.Value;
             string nom = textBox4.Text;
             string prenom = textBox1.Text;
-            int idMateriel = int.Parse(comboBox1.Text);
+          //  int idMateriel = int.Parse(comboBox1.Text);
             int nbrItem = int.Parse(textBox3.Text);
             int id = int.Parse(textBox5.Text);
             string retourne = radioButton1.Checked ? "Oui" : "Non";
-
+             
             {
-                if (resevationM.updateReservation(id, nom, prenom, dateL, dateR, idMateriel, nbrItem, retourne))
-                {
+                if (resevationM.updateReservation(id, nom, prenom, dateL, dateR, nbrItem, retourne))
+                {   
+
                     showTable();
                     MessageBox.Show("Enseignant data update", "Update Enseignant", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //button3.PerformClick();
+
+                   
                 }
                 //}
                 /*   catch (Exception ex)
@@ -138,7 +160,7 @@ namespace GestionEspav
                }*/
                 else
                 {
-                    MessageBox.Show("Redimentionner la photo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Erreur", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }
