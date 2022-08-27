@@ -162,7 +162,7 @@
             this.button16.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button16.Dock = System.Windows.Forms.DockStyle.Top;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button16.ForeColor = System.Drawing.Color.DarkViolet;
+            this.button16.ForeColor = System.Drawing.Color.White;
             this.button16.Location = new System.Drawing.Point(0, 47);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(244, 47);
@@ -176,7 +176,7 @@
             this.button15.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button15.Dock = System.Windows.Forms.DockStyle.Top;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button15.ForeColor = System.Drawing.Color.DarkViolet;
+            this.button15.ForeColor = System.Drawing.Color.White;
             this.button15.Location = new System.Drawing.Point(0, 0);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(244, 47);
@@ -213,7 +213,7 @@
             this.button12.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button12.Dock = System.Windows.Forms.DockStyle.Top;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.ForeColor = System.Drawing.Color.DarkViolet;
+            this.button12.ForeColor = System.Drawing.Color.White;
             this.button12.Location = new System.Drawing.Point(0, 0);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(244, 47);
@@ -253,7 +253,7 @@
             this.button7.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button7.Dock = System.Windows.Forms.DockStyle.Top;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.DarkViolet;
+            this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(0, 129);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(244, 43);
@@ -267,7 +267,7 @@
             this.button8.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button8.Dock = System.Windows.Forms.DockStyle.Top;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.DarkViolet;
+            this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Location = new System.Drawing.Point(0, 86);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(244, 43);
@@ -281,7 +281,7 @@
             this.button9.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button9.Dock = System.Windows.Forms.DockStyle.Top;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.DarkViolet;
+            this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Location = new System.Drawing.Point(0, 43);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(244, 43);
@@ -295,7 +295,7 @@
             this.button10.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button10.Dock = System.Windows.Forms.DockStyle.Top;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.DarkViolet;
+            this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.Location = new System.Drawing.Point(0, 0);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(244, 43);
@@ -335,7 +335,7 @@
             this.button5.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button5.Dock = System.Windows.Forms.DockStyle.Top;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.DarkViolet;
+            this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(0, 129);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(244, 43);
@@ -349,7 +349,7 @@
             this.button4.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button4.Dock = System.Windows.Forms.DockStyle.Top;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DarkViolet;
+            this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(0, 86);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(244, 43);
@@ -363,7 +363,7 @@
             this.button3.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button3.Dock = System.Windows.Forms.DockStyle.Top;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.DarkViolet;
+            this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(0, 43);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(244, 43);
@@ -377,7 +377,7 @@
             this.button2.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.DarkViolet;
+            this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(244, 43);

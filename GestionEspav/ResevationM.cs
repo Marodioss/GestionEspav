@@ -181,7 +181,7 @@ namespace GestionEspav
             command.Parameters.Add("@dr", MySqlDbType.Date).Value = dateR;
             command.Parameters.Add("@im", MySqlDbType.Int64).Value = idMateriel;
             command.Parameters.Add("@nbr", MySqlDbType.Int64).Value = nbrItem;
-            command.Parameters.Add("@rt", MySqlDbType.String).Value = retourne;
+            command.Parameters.Add("@rt", MySqlDbType.String).Value = retourne; 
 
 
             connect.openConnect();

@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.9.0.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
       <HintPath>..\packages\Portable.BouncyCastle.1.9.0\lib\net40\BouncyCastle.Crypto.dll</HintPath>
@@ -103,6 +106,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Buletin.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ChofiyanCHofik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChofiyanCHofik.Designer.cs">
+      <DependentUpon>ChofiyanCHofik.cs</DependentUpon>
     </Compile>
     <Compile Include="Class.cs" />
     <Compile Include="Coeffi.cs" />
@@ -228,9 +237,13 @@
       <DependentUpon>Splashscreen.cs</DependentUpon>
     </Compile>
     <Compile Include="ResevationM.cs" />
+    <Compile Include="Verification.cs" />
     <EmbeddedResource Include="Buletin.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Buletin.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChofiyanCHofik.resx">
+      <DependentUpon>ChofiyanCHofik.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrudEnseignant.resx">
       <DependentUpon>CrudEnseignant.cs</DependentUpon>
@@ -296,6 +309,7 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.manifest" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -16,7 +16,7 @@ namespace GestionEspav
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new reservationMat());
+            Application.Run(new Splashscreen());
 
         }
     }

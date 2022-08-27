@@ -40,5 +40,6 @@ namespace GestionEspav
             adapter.Fill(table);
             return table;
         }
+
     }
 }

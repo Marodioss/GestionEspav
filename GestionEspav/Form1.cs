@@ -77,6 +77,7 @@ namespace GestionEspav
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             studentCount();
         }
 

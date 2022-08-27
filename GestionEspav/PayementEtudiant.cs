@@ -76,10 +76,5 @@ namespace GestionEspav
             imageColumn = (DataGridViewImageColumn)dataGridView1.Columns[9];
             imageColumn.ImageLayout = DataGridViewImageCellLayout.Zoom;
         }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

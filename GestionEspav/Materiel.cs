@@ -47,6 +47,26 @@ namespace GestionEspav
             adapter.Fill(table);
             return table;
         }
+        public bool deleteMateriel(int id)
+        {
+            MySqlCommand command = new MySqlCommand("DELETE FROM `materiels` WHERE `id`=@id", connect.getconnection);
+
+            //@id
+            command.Parameters.Add("@id", MySqlDbType.Int32).Value = id;
+
+            connect.openConnect();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                connect.closeConnect();
+                return true;
+            }
+            else
+            {
+                connect.closeConnect();
+                return false;
+            }
+
+        }
         public bool updateMateriel(int id, string nomMateriel, string codeMateriel, int nbrUnite)
         {
             MySqlCommand command = new MySqlCommand("UPDATE `materiels` SET `nomMateriel`=@nomM,`codeMateriel`=@codeM,`nbrUnite`=@nbrU WHERE  `id` = @id", connect.getconnection);

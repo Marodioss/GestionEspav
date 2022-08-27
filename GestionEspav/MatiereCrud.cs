@@ -74,6 +74,21 @@ namespace GestionEspav
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(textBox3.Text); 
+            //Show a confirmation message before delete the student
+            if (MessageBox.Show("Are you sure you want to remove this student", "Remove Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (matiere.deleteMatiere(id))
+                {
+                    showTable();
+                    MessageBox.Show("Student Removed", "Remove student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
+                }
+            }
+        }
+
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

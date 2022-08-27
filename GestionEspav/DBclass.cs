@@ -11,7 +11,7 @@ namespace GestionEspav
     internal class DBclass
     {
         //to create connection
-        MySqlConnection connect = new MySqlConnection("datasource=localhost;port=3306;username=root;password='';database=espav");
+        MySqlConnection connect = new MySqlConnection("datasource=localhost;port=3306;username=root;password='';database=espav1");
 
         //to get connection
         public MySqlConnection getconnection
