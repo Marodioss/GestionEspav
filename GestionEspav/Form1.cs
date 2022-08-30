@@ -191,5 +191,11 @@ namespace GestionEspav
         {
             showsubmenu(panel8);
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            openChildForm(new gestionMateriels());
+            hidesubmenu();
+        }
     }
 }

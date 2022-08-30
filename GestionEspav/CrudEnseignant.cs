@@ -42,31 +42,49 @@ namespace GestionEspav
                 pictureBox2.Image = Image.FromFile(opf.FileName);
 
         }
+        bool verify()
+        {
+            if ((textBox1.Text == "") || (textBox2.Text == "") ||
+                (textBox3.Text == "") || (textBox4.Text == "") ||
+                (textBox5.Text == "") || (textBox6.Text == "") ||
+                (pictureBox2.Image == null))
+            {
+                return false;
+            }
+            else
+                return true;
+        }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
-            // add new enseignant
-            //string nom, string prenom, string cin, int idmE, string telephone, string whatsapp, string email, byte[] img
-            string nom = textBox1.Text;
-            string prenom = textBox2.Text;
-            string cin = textBox3.Text;
-            int idmE = int.Parse(comboBox1.GetItemText(comboBox1.SelectedValue));
-            string telephone = textBox4.Text;
-            string whatsapp = textBox5.Text;
-            string email = textBox6.Text;
-            MemoryStream ms = new MemoryStream();
-            pictureBox2.Image.Save(ms, pictureBox2.Image.RawFormat);
-            byte[] img = ms.ToArray();
-
-            if (enseignant.InsertEnseignant(nom, prenom, cin, idmE, telephone, whatsapp, email, img))
+            if (verify())
             {
-                MessageBox.Show("Nouveau Enseignant Ajouter", "Ajouter Enseignant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // add new enseignant
+                //string nom, string prenom, string cin, int idmE, string telephone, string whatsapp, string email, byte[] img
+                string nom = textBox1.Text;
+                string prenom = textBox2.Text;
+                string cin = textBox3.Text;
+                int idmE = int.Parse(comboBox1.GetItemText(comboBox1.SelectedValue));
+                string telephone = textBox4.Text;
+                string whatsapp = textBox5.Text;
+                string email = textBox6.Text;
+                MemoryStream ms = new MemoryStream();
+                pictureBox2.Image.Save(ms, pictureBox2.Image.RawFormat);
+                byte[] img = ms.ToArray();
+
+                if (enseignant.InsertEnseignant(nom, prenom, cin, idmE, telephone, whatsapp, email, img))
+                {
+                    MessageBox.Show("Nouveau Enseignant Ajouter", "Ajouter Enseignant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Empty Field", "Ajouter Enseignant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
             }
             else
             {
                 MessageBox.Show("Empty Field", "Ajouter Enseignant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
             }
         }
 

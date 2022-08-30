@@ -23,6 +23,18 @@ namespace GestionEspav
             LoadcomboNote();
             showTable();
         }
+        bool verify()
+        {
+            if ((textBox1.Text == "") || (textBox2.Text == "") ||
+                (textBox3.Text == "") 
+               
+                )
+            {
+                return false;
+            }
+            else
+                return true;
+        }
         private void LoadcomboNote()
         {
 
@@ -48,16 +60,22 @@ namespace GestionEspav
             int idE = int.Parse(student.getEtudiantNP(textBox1.Text, textBox2.Text));
             int idM = int.Parse(comboBox1.GetItemText(comboBox1.SelectedValue));
             float note = float.Parse(textBox3.Text);
-        
-            if (notes.InsertNote(note, idM, idE))
+            if (verify())
             {
-                MessageBox.Show("Note Ajouter", "Payement Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                showTable();
+                if (notes.InsertNote(note, idM, idE))
+                {
+                    MessageBox.Show("Note Ajouter", "Payement Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    showTable();
+                }
+                else
+                {
+                    MessageBox.Show("Empty Field", "Payement ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
             }
             else
             {
-                MessageBox.Show("Empty Field", "Payement ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                MessageBox.Show("Empty Field", "Remplir tous les champs ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -66,16 +84,22 @@ namespace GestionEspav
             int idE = int.Parse(student.getEtudiantNP(textBox1.Text, textBox2.Text));
             int idM = int.Parse(comboBox1.GetItemText(comboBox1.SelectedValue));
             float note = float.Parse(textBox3.Text);
-
-            if (controle.InsertControle(note, idM, idE))
+            if (verify())
             {
-                MessageBox.Show("Payement Ajouter", "Payement Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                showTable();
+                if (controle.InsertControle(note, idM, idE))
+                {
+                    MessageBox.Show("Payement Ajouter", "Payement Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    showTable();
+                }
+                else
+                {
+                    MessageBox.Show("Empty Field", "Payement ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
             }
             else
             {
-                MessageBox.Show("Empty Field", "Payement ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                MessageBox.Show("Empty Field", "Remplir tous les champs", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

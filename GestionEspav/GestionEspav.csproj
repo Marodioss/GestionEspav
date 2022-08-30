@@ -58,6 +58,18 @@
     <Reference Include="Guna.UI2, Version=2.0.3.4, Culture=neutral, PublicKeyToken=4015e4865bda28a4, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.3.4\lib\net40\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.Common.10.0.40219.1\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportViewer.WinForms.10.0.40219.1\lib\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="MySql.Data, Version=8.0.30.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.8.0.30\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
@@ -288,6 +300,7 @@
     <EmbeddedResource Include="PayementEtudiant.resx">
       <DependentUpon>PayementEtudiant.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ReportListEtudiant.rdlc" />
     <EmbeddedResource Include="Splashscreen.resx">
       <DependentUpon>Splashscreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +324,44 @@
     </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Buletin.datasource" />
+    <None Include="Properties\DataSources\CachedBuletin.datasource" />
+    <None Include="Properties\DataSources\CachedFichePayement.datasource" />
+    <None Include="Properties\DataSources\ChofiyanCHofik.datasource" />
+    <None Include="Properties\DataSources\Class.datasource" />
+    <None Include="Properties\DataSources\Coeffi.datasource" />
+    <None Include="Properties\DataSources\Controle.datasource" />
+    <None Include="Properties\DataSources\CrudEnseignant.datasource" />
+    <None Include="Properties\DataSources\CrudEtudiant.datasource" />
+    <None Include="Properties\DataSources\DBclass.datasource" />
+    <None Include="Properties\DataSources\DemandeAcce.datasource" />
+    <None Include="Properties\DataSources\demandeAcces.datasource" />
+    <None Include="Properties\DataSources\Enseignant.datasource" />
+    <None Include="Properties\DataSources\Etudiant.datasource" />
+    <None Include="Properties\DataSources\FichePayement.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\gestionMateriels.datasource" />
+    <None Include="Properties\DataSources\ImprimerBulletin.datasource" />
+    <None Include="Properties\DataSources\ListeEnseignant.datasource" />
+    <None Include="Properties\DataSources\ListEtudiant.datasource" />
+    <None Include="Properties\DataSources\Login.datasource" />
+    <None Include="Properties\DataSources\Materiel.datasource" />
+    <None Include="Properties\DataSources\Matiere.datasource" />
+    <None Include="Properties\DataSources\MatiereCrud.datasource" />
+    <None Include="Properties\DataSources\Notes.datasource" />
+    <None Include="Properties\DataSources\NotesClass.datasource" />
+    <None Include="Properties\DataSources\paiementEns.datasource" />
+    <None Include="Properties\DataSources\PaiementEnsg.datasource" />
+    <None Include="Properties\DataSources\PaimentImprimer.datasource" />
+    <None Include="Properties\DataSources\PayementETUClass.datasource" />
+    <None Include="Properties\DataSources\PayementEtudiant.datasource" />
+    <None Include="Properties\DataSources\PresenceEns.datasource" />
+    <None Include="Properties\DataSources\presenceEnsg.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\reservationMat.datasource" />
+    <None Include="Properties\DataSources\ResevationM.datasource" />
+    <None Include="Properties\DataSources\Splashscreen.datasource" />
+    <None Include="Properties\DataSources\Verification.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

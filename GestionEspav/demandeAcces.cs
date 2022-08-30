@@ -26,8 +26,19 @@ namespace GestionEspav
              dataGridView1.DataSource = demandeAcce.getDemandeAcceList(new MySqlCommand("SELECT * FROM `reservationsalle`"));
 
         }
-        
-       
+        bool verify()
+        {
+            if ((textBox1.Text == "") || (textBox9.Text == "") ||
+                (textBox9.Text == "") || (textBox4.Text == "") ||
+                (textBox5.Text == "") || (textBox6.Text == "") ||
+                (textBox7.Text == "") || textBox8.Text == "")
+            {
+                return false;
+            }
+            else
+                return true;
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             String nom = textBox4.Text;
@@ -42,31 +53,36 @@ namespace GestionEspav
             String natureTrav = textBox9.Text;
             String salle = textBox10.Text;
 
-          //  int a = 0;
-        //    a = int.Parse(textBox2.Text);
+            //  int a = 0;
+            //    a = int.Parse(textBox2.Text);
             //string retourne = radioButton1.Checked ? "Oui" : "Non";
-          
-            
-            if (demandeAcce.insertDemandeAcce(nom, prenom, dateR, dateH,
-                                                     nomParticip, chefEquipe, duree, natureTrav, salle))
-            {
-                MessageBox.Show("Demande d'acces Ajouter", " demande d'acces Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                showTable();
-            }
 
+            if (verify())
+            {
+                if (demandeAcce.insertDemandeAcce(nom, prenom, dateR, dateH,
+                                                         nomParticip, chefEquipe, duree, natureTrav, salle))
+                {
+                    MessageBox.Show("Demande d'acces Ajouter", " demande d'acces Ajouter", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    showTable();
+                }
+
+                else
+                {
+                    MessageBox.Show("Empty Field", "Demande d'acces ajouter ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+            }
             else
             {
-                MessageBox.Show("Empty Field", "Demande d'acces ajouter ", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                MessageBox.Show("Empty Field", "Remplir tous les champs", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            
            
         }
 
        
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        {/*
             textBox5.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBox4.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
@@ -81,7 +97,7 @@ namespace GestionEspav
             textBox8.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             textBox9.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
             textBox10.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
-
+            */
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -119,6 +135,24 @@ namespace GestionEspav
             reservationMat main = new reservationMat();
             this.Hide();
             main.Show();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            textBox5.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBox4.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            dateTimePicker1.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            dateTimePicker2.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+
+            //comboBox1.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+
+            //   textBox3.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            textBox7.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            textBox6.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            textBox8.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
+            textBox9.Text = dataGridView1.CurrentRow.Cells[8].Value.ToString();
+            textBox10.Text = dataGridView1.CurrentRow.Cells[9].Value.ToString();
         }
     }
 }

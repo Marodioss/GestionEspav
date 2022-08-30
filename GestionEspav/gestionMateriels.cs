@@ -21,23 +21,40 @@ namespace GestionEspav
             InitializeComponent();
             showTable();
         }
-       
+        bool verify()
+        {
+            if ((textBox1.Text == "") || (textBox2.Text == "") 
+                || (textBox4.Text == "") )
+                
+                
+            {
+                return false;
+            }
+            else
+                return true;
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             string nomMateriel = textBox7.Text;
             string codeMateriel = textBox4.Text;
             int nbrUnite = int.Parse(textBox1.Text);
 
-
-            if (materiel.InsertMateriel(nomMateriel, codeMateriel, nbrUnite))
+            if (verify())
             {
-                showTable();
-                MessageBox.Show("Nouveau Materiel Ajouter", "Ajouter Materiel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (materiel.InsertMateriel(nomMateriel, codeMateriel, nbrUnite))
+                {
+                    showTable();
+                    MessageBox.Show("Nouveau Materiel Ajouter", "Ajouter Materiel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Empty Field", "Ajouter Materiel", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
             }
             else
             {
-                MessageBox.Show("Empty Field", "Ajouter Materiel", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+               MessageBox.Show("Empty Field", "Ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -86,12 +103,36 @@ namespace GestionEspav
 
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {/*
+            textBox7.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBox4.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+         */
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
             textBox7.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
             textBox4.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(textBox7.Text);
+            //Show a confirmation message before delete the student
+            if (MessageBox.Show("Are you sure you want to remove this Materiel", "Remove Materiel", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (materiel.deleteMateriel(id))
+                {
+                    showTable();
+                    MessageBox.Show("Materiel Removed", "Remove Materiel", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
         }
     }
 }

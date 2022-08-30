@@ -64,6 +64,7 @@
             this.label_totalStd = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.button14 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -125,9 +126,9 @@
             this.button18.Dock = System.Windows.Forms.DockStyle.Top;
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.button18.Location = new System.Drawing.Point(0, 806);
+            this.button18.Location = new System.Drawing.Point(0, 846);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(244, 63);
+            this.button18.Size = new System.Drawing.Size(244, 61);
             this.button18.TabIndex = 9;
             this.button18.Text = "Exit";
             this.button18.UseVisualStyleBackColor = false;
@@ -139,7 +140,7 @@
             this.button17.Dock = System.Windows.Forms.DockStyle.Top;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button17.Location = new System.Drawing.Point(0, 743);
+            this.button17.Location = new System.Drawing.Point(0, 783);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(244, 63);
             this.button17.TabIndex = 8;
@@ -152,7 +153,7 @@
             this.panel8.Controls.Add(this.button16);
             this.panel8.Controls.Add(this.button15);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel8.Location = new System.Drawing.Point(0, 643);
+            this.panel8.Location = new System.Drawing.Point(0, 683);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(244, 100);
             this.panel8.TabIndex = 7;
@@ -191,7 +192,7 @@
             this.button13.Dock = System.Windows.Forms.DockStyle.Top;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button13.Location = new System.Drawing.Point(0, 580);
+            this.button13.Location = new System.Drawing.Point(0, 620);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(244, 63);
             this.button13.TabIndex = 6;
@@ -201,11 +202,12 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.button14);
             this.panel7.Controls.Add(this.button12);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 533);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(244, 47);
+            this.panel7.Size = new System.Drawing.Size(244, 87);
             this.panel7.TabIndex = 5;
             // 
             // button12
@@ -216,7 +218,7 @@
             this.button12.ForeColor = System.Drawing.Color.White;
             this.button12.Location = new System.Drawing.Point(0, 0);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(244, 47);
+            this.button12.Size = new System.Drawing.Size(244, 45);
             this.button12.TabIndex = 0;
             this.button12.Text = "Ajouter Matiere";
             this.button12.UseVisualStyleBackColor = false;
@@ -232,7 +234,7 @@
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(244, 63);
             this.button11.TabIndex = 4;
-            this.button11.Text = "Gestion Matiere";
+            this.button11.Text = "Gestion Matiere\\Materiele";
             this.button11.UseVisualStyleBackColor = false;
             this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
@@ -523,6 +525,20 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Application Gestion Espav ";
             // 
+            // button14
+            // 
+            this.button14.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.button14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.Color.White;
+            this.button14.Location = new System.Drawing.Point(0, 45);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(244, 42);
+            this.button14.TabIndex = 1;
+            this.button14.Text = "Ajouter Materiele";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -590,6 +606,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button button14;
     }
 }
 

@@ -20,16 +20,17 @@ namespace GestionEspav
         {
             InitializeComponent();
             showTable();
+            LoadcomboClass();
         }
         private void LoadcomboClass()
         {
 
-            MySqlDataAdapter da = new MySqlDataAdapter("SELECT idMatiere , nomMatiere FROM matiere", con.getconnection);
+            MySqlDataAdapter da = new MySqlDataAdapter("SELECT id , nom FROM matiere", con.getconnection);
             DataTable dt = new DataTable();
             da.Fill(dt);
             comboBox1.DataSource = dt;
-            comboBox1.DisplayMember = "nomMatiere";
-            comboBox1.ValueMember = "idMatiere";
+            comboBox1.DisplayMember = "nom";
+            comboBox1.ValueMember = "id";
         }
         private void ListEnseignant_Load_1(object sender, EventArgs e)
         {
@@ -130,6 +131,26 @@ namespace GestionEspav
             MemoryStream ms = new MemoryStream(img);
             pictureBox2.Image = Image.FromStream(ms);
 
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(textBox7.Text);
+            //Show a confirmation message before delete the student
+            if (MessageBox.Show("Are you sure you want to remove this student", "Remove Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (enseignant.deleteEnseignat(id))
+                {
+                    showTable();
+                    MessageBox.Show("Student Removed", "Remove student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    button3.PerformClick();
+                }
+            }
+        }
+
+        private void ListeEnseignant_Load(object sender, EventArgs e)
+        {
 
         }
     }
