@@ -75,6 +75,29 @@ namespace GestionEspav
 
             }
         }
+        public bool verifieidmat(string nom)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT id FROM `matiere` WHERE nom = @nm", connect.getconnection);
+            command.Parameters.Add("@nm", MySqlDbType.VarChar).Value = nom;
+            MySqlDataReader reader;
+            connect.openConnect();
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                string id = reader["id"].ToString();
+                reader.Close();
+                connect.closeConnect();
+                return true;
+
+            }
+            else
+            {
+                reader.Close();
+                connect.closeConnect();
+                return false;
+
+            }
+        }
         public DataTable getMatiereList(MySqlCommand command)
         {
             command.Connection = connect.getconnection;

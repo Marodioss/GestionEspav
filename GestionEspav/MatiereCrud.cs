@@ -55,12 +55,11 @@ namespace GestionEspav
         private void button1_Click(object sender, EventArgs e)
         {
             String Nom = textBox1.Text;
-            int coff = int.Parse(textBox2.Text);
-            int idc = int.Parse(comboBox1.GetItemText(comboBox1.SelectedValue));
-            if (matiere.InsertMatiere(Nom))
+            if (matiere.verifieidmat(Nom))
             {
                 int idM = int.Parse(matiere.getMatiereId(Nom));
-
+                int coff = int.Parse(textBox2.Text);
+                int idc = int.Parse(comboBox1.GetItemText(comboBox1.SelectedValue));
                 if (coeffi.InsertCoedd(coff, idM, idc))
                 {
                     showTable();
@@ -71,7 +70,30 @@ namespace GestionEspav
                     MessageBox.Show("Empty Field", "Ajouter Enseignant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
+
             }
+            else
+            {
+                if (matiere.InsertMatiere(Nom))
+                {
+                    int coff = int.Parse(textBox2.Text);
+                    int idc = int.Parse(comboBox1.GetItemText(comboBox1.SelectedValue));
+                    int idM = int.Parse(matiere.getMatiereId(Nom));
+                    if (coeffi.InsertCoedd(coff, idM, idc))
+                    {
+                        showTable();
+                        MessageBox.Show("Nouvelle matiers Ajouter", "Ajouter Enseignant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Empty Field", "Ajouter Enseignant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                    }
+
+                }
+            }
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
