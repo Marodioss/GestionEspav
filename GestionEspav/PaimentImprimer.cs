@@ -12,6 +12,7 @@ namespace GestionEspav
 {
     public partial class PaimentImprimer : Form
     {
+        Etudiant student = new Etudiant();
         public PaimentImprimer()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace GestionEspav
             blt.SetParameterValue("name", textBox1.Text);
             blt.SetParameterValue("prenom", textBox2.Text);
             blt.SetParameterValue("dateM", dateTimePicker1.Value);
+            // blt.SetParameterValue("dateM", dateTimePicker1.Value);
             crystalReportViewer1.ReportSource = blt;
             crystalReportViewer1.Refresh();
         }
