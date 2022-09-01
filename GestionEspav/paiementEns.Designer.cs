@@ -68,6 +68,7 @@
             // 
             this.button2.BackColor = System.Drawing.Color.DarkViolet;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button2.Location = new System.Drawing.Point(992, 236);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(110, 41);
@@ -80,6 +81,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.DarkViolet;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button1.Location = new System.Drawing.Point(593, 308);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(218, 59);
@@ -202,6 +204,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(110, 33);
             this.textBox3.TabIndex = 37;
+            this.textBox3.Visible = false;
             // 
             // textBox2
             // 
@@ -274,7 +277,7 @@
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
@@ -318,7 +321,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox4);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "paiementEns";
             this.Text = "paiementEns";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

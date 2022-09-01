@@ -70,25 +70,7 @@ namespace GestionEspav
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            /*
-            textBox5.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            textBox4.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            textBox1.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            dateTimePicker1.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            dateTimePicker2.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
-
-            String i = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            comboBox1.Text = resevationM.getMaterielNom(i);
-            textBox3.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
-            String r = dataGridView1.CurrentRow.Cells[7].Value.ToString();
-            if(r == "Oui")
-            {
-                radioButton1.Checked = true;
-            }
-            else 
-                radioButton2.Checked = true;
-
-            */
+            
         }
 
         private void reservationMat_Load(object sender, EventArgs e)

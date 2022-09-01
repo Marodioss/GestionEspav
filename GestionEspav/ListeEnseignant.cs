@@ -123,27 +123,29 @@ namespace GestionEspav
             textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             textBox3.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            comboBox1.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            
+            String i = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            comboBox1.Text = enseignant.getMatiereNom(i);
+          //  comboBox1.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+
             textBox4.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             textBox5.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
             textBox6.Text = dataGridView1.CurrentRow.Cells[7].Value.ToString();
             byte[] img = (byte[])dataGridView1.CurrentRow.Cells[8].Value;
             MemoryStream ms = new MemoryStream(img);
             pictureBox2.Image = Image.FromStream(ms);
-
-
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(textBox7.Text);
             //Show a confirmation message before delete the student
-            if (MessageBox.Show("Are you sure you want to remove this student", "Remove Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to remove this Enseignant", "Remove Enseignant", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (enseignant.deleteEnseignat(id))
                 {
                     showTable();
-                    MessageBox.Show("Student Removed", "Remove student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Enseignant Removed", "Remove Enseignant", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     button3.PerformClick();
                 }
             }

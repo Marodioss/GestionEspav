@@ -64,12 +64,12 @@ namespace GestionEspav
             {
                 if (notes.InsertNote(note, idM, idE))
                 {
-                    MessageBox.Show("Note Ajouter", "Payement Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Note Ajouter", "Note Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     showTable();
                 }
                 else
                 {
-                    MessageBox.Show("Empty Field", "Payement ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Empty Field", "Note ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
             }
@@ -88,12 +88,12 @@ namespace GestionEspav
             {
                 if (controle.InsertControle(note, idM, idE))
                 {
-                    MessageBox.Show("Payement Ajouter", "Payement Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Note Ajouter", "Note Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     showTable();
                 }
                 else
                 {
-                    MessageBox.Show("Empty Field", "Payement ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Empty Field", "Note ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                 }
             }

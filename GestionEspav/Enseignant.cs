@@ -98,6 +98,30 @@ namespace GestionEspav
 
             }
         }
+        public string getMatiereNom(String id)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT nom FROM `matiere` WHERE id = @nm", connect.getconnection);
+            command.Parameters.Add("@nm", MySqlDbType.String).Value = id;
+
+            MySqlDataReader reader;
+            connect.openConnect();
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                string i = reader["nom"].ToString();
+                reader.Close();
+                connect.closeConnect();
+                return i;
+
+            }
+            else
+            {
+                reader.Close();
+                connect.closeConnect();
+                return null;
+
+            }
+        }
         public bool deleteEnseignat(int id)
         {
             MySqlCommand command = new MySqlCommand("DELETE FROM `enseignant` WHERE `id`=@id", connect.getconnection);
