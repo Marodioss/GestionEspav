@@ -52,6 +52,30 @@ namespace GestionEspav
             }
 
         }
+         public string getMaterielNom(String id)
+        {
+            MySqlCommand command = new MySqlCommand("SELECT nomMateriel FROM `materiels` WHERE id = @nm", connect.getconnection);
+            command.Parameters.Add("@nm", MySqlDbType.String).Value = id;
+
+            MySqlDataReader reader;
+            connect.openConnect();
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+                string i = reader["nomMateriel"].ToString();
+                reader.Close();
+                connect.closeConnect();
+                return i;
+
+            }
+            else
+            {
+                reader.Close();
+                connect.closeConnect();
+                return null;
+
+            }
+        }
         public string getMatiereId(string nom)
         {
             MySqlCommand command = new MySqlCommand("SELECT id FROM `matiere` WHERE nom = @nm", connect.getconnection);

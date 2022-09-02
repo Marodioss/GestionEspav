@@ -39,7 +39,7 @@ namespace GestionEspav
         }
         public void showTable()
         {
-            dataGridView1.DataSource = matiere.getMatiereList(new MySqlCommand("select m.nom , c.coff ,cl.specialiter from matiere m inner join coefficient c on (m.id = c.idmatiere) inner join class cl on (c.idclass = cl.id);"));
+            dataGridView1.DataSource = matiere.getMatiereList(new MySqlCommand("select m.id, m.nom , c.coff ,cl.specialiter from matiere m inner join coefficient c on (m.id = c.idmatiere) inner join class cl on (c.idclass = cl.id);"));
 
         }
         bool verify()
@@ -82,11 +82,11 @@ namespace GestionEspav
                     if (coeffi.InsertCoedd(coff, idM, idc))
                     {
                         showTable();
-                        MessageBox.Show("Nouvelle matiers Ajouter", "Ajouter Enseignant", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Nouvelle matiers Ajouter", "Ajouter Matière", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Empty Field", "Ajouter Enseignant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Empty Field", "Ajouter Matière", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
                     }
 
@@ -100,12 +100,12 @@ namespace GestionEspav
         {
             int id = Convert.ToInt32(textBox3.Text); 
             //Show a confirmation message before delete the student
-            if (MessageBox.Show("Are you sure you want to remove this student", "Remove Student", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure you want to remove this student", "Remove Matière", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (matiere.deleteMatiere(id))
                 {
                     showTable();
-                    MessageBox.Show("Student Removed", "Remove student", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Matière Removed", "Remove Matière", MessageBoxButtons.OK, MessageBoxIcon.Information);
                    
                 }
             }
@@ -113,6 +113,10 @@ namespace GestionEspav
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            textBox3.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            textBox1.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            textBox2.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString(); 
+            comboBox1.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
 
         }
     }

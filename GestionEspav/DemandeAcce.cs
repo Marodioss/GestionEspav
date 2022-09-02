@@ -92,7 +92,7 @@ namespace GestionEspav
                 return null;
             }
         }
-        public bool updateReservationSalle(int id, String nom, String prenom, DateTime dateR, DateTime dateH,
+        public bool updateReservationSalle(int id, String nom, String prenom, DateTime dateR, String dateH,
                                         String nomParticip, String chefEquipe, float duree, String natureTrav, String salle)
         {
            
@@ -102,7 +102,7 @@ namespace GestionEspav
             command.Parameters.Add("@nm", MySqlDbType.String).Value = nom;
             command.Parameters.Add("@pr", MySqlDbType.String).Value = prenom;
             command.Parameters.Add("@dr", MySqlDbType.Date).Value = dateR;
-            command.Parameters.Add("@dh", MySqlDbType.Date).Value = dateH;
+            command.Parameters.Add("@dh", MySqlDbType.String).Value = dateH;
            // command.Parameters.Add("@im", MySqlDbType.Int64).Value = idMateriel;
            // command.Parameters.Add("@nbr", MySqlDbType.Int64).Value = nbrItem;
             command.Parameters.Add("@np", MySqlDbType.String).Value = nomParticip;
@@ -124,7 +124,7 @@ namespace GestionEspav
                 return false;
             }
         }
-        public bool insertDemandeAcce(String nom, String prenom, DateTime dateR, DateTime dateH, String nomParticip, String chefEquipe, float duree,String natureTrav, String salle)
+        public bool insertDemandeAcce(String nom, String prenom, DateTime dateR, String dateH, String nomParticip, String chefEquipe, float duree,String natureTrav, String salle)
         {
             MySqlCommand command = new MySqlCommand("INSERT INTO `reservationsalle`(`nom`, `prenom`, `dateR`, `dateH`, `nomParticip`, `chefEquipe`, `duree`, `natureTrav`, `salle`) VALUES (@nm,@pr,@dr,@dh,@np,@ce,@dur,@nt,@sl)", connect.getconnection);
 
@@ -132,7 +132,7 @@ namespace GestionEspav
             command.Parameters.Add("@nm", MySqlDbType.String).Value = nom;
             command.Parameters.Add("@pr", MySqlDbType.String).Value = prenom;
             command.Parameters.Add("@dr", MySqlDbType.Date).Value = dateR;
-            command.Parameters.Add("@dh", MySqlDbType.Date).Value = dateH;
+            command.Parameters.Add("@dh", MySqlDbType.String).Value = dateH;
           //  command.Parameters.Add("@im", MySqlDbType.Int64).Value = idMateriel;
           //  command.Parameters.Add("@ni", MySqlDbType.Int64).Value = nbrItem;
             command.Parameters.Add("@np", MySqlDbType.String).Value = nomParticip;

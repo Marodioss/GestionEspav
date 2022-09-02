@@ -35,9 +35,10 @@ namespace GestionEspav
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            string nomMateriel = textBox7.Text;
-            string codeMateriel = textBox4.Text;
-            int nbrUnite = int.Parse(textBox1.Text);
+           // int id = int.Parse(textBox7.Text);
+            string nomMateriel = textBox4.Text;
+            string codeMateriel = textBox1.Text;
+            int nbrUnite = int.Parse(textBox2.Text);
 
             if (verify())
             {
@@ -54,16 +55,16 @@ namespace GestionEspav
             }
             else
             {
-               MessageBox.Show("Empty Field", "Ajouter Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+               MessageBox.Show("Empty Field", "Ajouter Materiel", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             int id = int.Parse(textBox7.Text);
-            string nomMateriel = textBox7.Text;
-            string codeMateriel = textBox4.Text;
-            int nbrUnite = int.Parse(textBox1.Text);
+            string nomMateriel = textBox4.Text;
+            string codeMateriel = textBox1.Text;
+            int nbrUnite = int.Parse(textBox2.Text);
 
 
             if (materiel.updateMateriel(id, nomMateriel, codeMateriel, nbrUnite))
