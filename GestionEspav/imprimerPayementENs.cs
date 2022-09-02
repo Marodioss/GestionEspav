@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace GestionEspav
 {
-    public partial class PaimentImprimer : Form
+    public partial class imprimerPayementENs : Form
     {
-        Etudiant student = new Etudiant();
-        public PaimentImprimer()
+        public imprimerPayementENs()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FichePayement blt = new FichePayement();
+            payementEns blt = new payementEns();
             blt.SetParameterValue("name", textBox1.Text);
             blt.SetParameterValue("prenom", textBox2.Text);
             blt.SetParameterValue("dateM", dateTimePicker1.Value);
@@ -34,7 +33,7 @@ namespace GestionEspav
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -54,7 +53,7 @@ namespace GestionEspav
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

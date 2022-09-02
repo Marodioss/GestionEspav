@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
-            this.FichePayement1 = new GestionEspav.FichePayement();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,19 +35,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.FichePayement1 = new GestionEspav.FichePayement();
+            this.payementEns1 = new GestionEspav.payementEns();
             this.SuspendLayout();
-            // 
-            // crystalReportViewer1
-            // 
-            this.crystalReportViewer1.ActiveViewIndex = 0;
-            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 216);
-            this.crystalReportViewer1.Name = "crystalReportViewer1";
-            this.crystalReportViewer1.ReportSource = this.FichePayement1;
-            this.crystalReportViewer1.Size = new System.Drawing.Size(1206, 424);
-            this.crystalReportViewer1.TabIndex = 0;
             // 
             // textBox1
             // 
@@ -57,6 +46,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 22);
             this.textBox1.TabIndex = 1;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
@@ -64,6 +54,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 22);
             this.textBox2.TabIndex = 2;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label1
             // 
@@ -73,6 +64,7 @@
             this.label1.Size = new System.Drawing.Size(36, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nom";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -82,6 +74,7 @@
             this.label2.Size = new System.Drawing.Size(54, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "Prenom";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button1
             // 
@@ -99,6 +92,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 6;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // label4
             // 
@@ -108,6 +102,19 @@
             this.label4.Size = new System.Drawing.Size(36, 16);
             this.label4.TabIndex = 8;
             this.label4.Text = "Date";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = 0;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 216);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.ReportSource = this.FichePayement1;
+            this.crystalReportViewer1.Size = new System.Drawing.Size(1206, 424);
+            this.crystalReportViewer1.TabIndex = 0;
             // 
             // PaimentImprimer
             // 
@@ -140,5 +147,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label4;
+        private payementEns payementEns1;
     }
 }
