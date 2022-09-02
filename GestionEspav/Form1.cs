@@ -25,6 +25,7 @@ namespace GestionEspav
             panel6.Visible = false;
             panel7.Visible = false;
             panel8.Visible = false;
+            panel12.Visible = false;
 
         }
         private void hidesubmenu()
@@ -37,6 +38,8 @@ namespace GestionEspav
                 panel7.Visible = false;
             if (panel8.Visible == true)
                 panel8.Visible = false;
+            if (panel12.Visible == true)
+                panel12.Visible = false;
 
         }
         private Form activeForm = null;
@@ -195,6 +198,35 @@ namespace GestionEspav
         private void button14_Click(object sender, EventArgs e)
         {
             openChildForm(new gestionMateriels());
+            hidesubmenu();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            showsubmenu(panel12);
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            openChildForm(new PaimentImprimer());
+            hidesubmenu();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            openChildForm(new imprimerPayementENs());
+            hidesubmenu();
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            openChildForm(new imprimersalle());
+            hidesubmenu();
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            openChildForm(new reservationMaterielimp());
             hidesubmenu();
         }
     }
