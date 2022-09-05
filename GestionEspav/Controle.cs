@@ -11,14 +11,17 @@ namespace GestionEspav
     internal class Controle
     {
         DBclass connect = new DBclass();
-        public bool InsertControle(float note, int idmatiere, int idEtudiant)
+        public bool InsertControle(float note, int idmatiere, int idEtudiant , int CID)
         {
-            MySqlCommand command = new MySqlCommand("INSERT INTO `controle`(`note`, `idEtudiant`, `idMatiere`) VALUES(@no, @ie, @im )", connect.getconnection);
+            MySqlCommand command = new MySqlCommand("INSERT INTO `controle`(`note`, `idEtudiant`, `idMatiere`,`cid`) VALUES(@no, @ie, @im ,@cid )", connect.getconnection);
 
             //@na, @pre2
             command.Parameters.Add("@no", MySqlDbType.Float).Value = note;
             command.Parameters.Add("@im", MySqlDbType.Int64).Value = idmatiere;
             command.Parameters.Add("@ie", MySqlDbType.Int64).Value = idEtudiant;
+            command.Parameters.Add("@cid", MySqlDbType.Int64).Value = CID;
+
+
             connect.openConnect();
             if (command.ExecuteNonQuery() == 1)
             {

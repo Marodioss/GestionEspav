@@ -21,7 +21,8 @@ namespace GestionEspav
         {
             InitializeComponent();
             LoadcomboNote();
-            showTable();
+            showTableC();
+            showTableE();
         }
         bool verify()
         {
@@ -45,14 +46,20 @@ namespace GestionEspav
             comboBox1.DisplayMember = "nom";
             comboBox1.ValueMember = "id";
         }
-        public void showTable()
+        public void showTableC()
         {
-            dataGridView1.DataSource = notes.getNotesList(new MySqlCommand("SELECT m.nom,c.coff , cl.specialiter , ex.note as examen , co.note ,e.nom , e.prenom as controle from matiere m INNER JOIN coefficient c on (m.id = c.idmatiere) INNER JOIN class cl ON(c.idclass = cl.id) inner join etudiant e on (cl.id = e.idclass) inner JOIN notes ex on (ex.idmatiere = m.id and ex.idEtudiant = e.id)inner JOIN controle co on (co.idmatiere = m.id and co.idEtudiant = e.id);"));
+            dataGridView1.DataSource = notes.getNotesList(new MySqlCommand("SELECT m.nom , e.nom , e.prenom,c.note FROM controle c inner join etudiant e on (c.idEtudiant = e.id) inner join matiere m on (c.idMatiere = m.id); "));
+        }
+        public void showTableE()
+        {
+            dataGridView2.DataSource = notes.getNotesList(new MySqlCommand("SELECT m.nom , e.nom , e.prenom,c.note FROM notes c inner join etudiant e on (c.idEtudiant = e.id) inner join matiere m on (c.idMatiere = m.id); "));
         }
 
         private void Notes_Load(object sender, EventArgs e)
         {
-            showTable();
+            showTableC();
+            showTableE();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -65,7 +72,7 @@ namespace GestionEspav
                 if (notes.InsertNote(note, idM, idE))
                 {
                     MessageBox.Show("Note Ajouter", "Note Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    showTable();
+                    showTableE();
                 }
                 else
                 {
@@ -83,13 +90,14 @@ namespace GestionEspav
         {
             int idE = int.Parse(student.getEtudiantNP(textBox1.Text, textBox2.Text));
             int idM = int.Parse(comboBox1.GetItemText(comboBox1.SelectedValue));
+            int Cid = int.Parse(comboBox2.GetItemText(comboBox2.SelectedValue));
             float note = float.Parse(textBox3.Text);
             if (verify())
             {
-                if (controle.InsertControle(note, idM, idE))
+                if (controle.InsertControle(note, idM, idE,Cid))
                 {
                     MessageBox.Show("Note Ajouter", "Note Etudiant", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    showTable();
+                    showTableC();
                 }
                 else
                 {
@@ -104,6 +112,11 @@ namespace GestionEspav
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
