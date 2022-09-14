@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionEspav", "GestionEspav\GestionEspav.csproj", "{DE569DBC-641E-481A-8F42-820AA43DA2BA}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Espav2", "Espav2\Espav2.vdproj", "{4F142D46-5468-449A-BEFA-CC580FB65EC5}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Espavv2", "Espavv2\Espavv2.vdproj", "{242440DE-AC7D-4F5C-9E10-3C0997886DC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,8 +17,8 @@ Global
 		{DE569DBC-641E-481A-8F42-820AA43DA2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE569DBC-641E-481A-8F42-820AA43DA2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE569DBC-641E-481A-8F42-820AA43DA2BA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4F142D46-5468-449A-BEFA-CC580FB65EC5}.Debug|Any CPU.ActiveCfg = Debug
-		{4F142D46-5468-449A-BEFA-CC580FB65EC5}.Release|Any CPU.ActiveCfg = Release
+		{242440DE-AC7D-4F5C-9E10-3C0997886DC2}.Debug|Any CPU.ActiveCfg = Debug
+		{242440DE-AC7D-4F5C-9E10-3C0997886DC2}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

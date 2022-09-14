@@ -48,7 +48,7 @@ namespace GestionEspav
         }
         public void showTableC()
         {
-            dataGridView1.DataSource = notes.getNotesList(new MySqlCommand("SELECT m.nom , e.nom , e.prenom,c.note FROM controle c inner join etudiant e on (c.idEtudiant = e.id) inner join matiere m on (c.idMatiere = m.id); "));
+            dataGridView1.DataSource = notes.getNotesList(new MySqlCommand("SELECT m.nom , e.nom , e.prenom,c.note,c.cid FROM controle c inner join etudiant e on (c.idEtudiant = e.id) inner join matiere m on (c.idMatiere = m.id); "));
         }
         public void showTableE()
         {
@@ -90,7 +90,7 @@ namespace GestionEspav
         {
             int idE = int.Parse(student.getEtudiantNP(textBox1.Text, textBox2.Text));
             int idM = int.Parse(comboBox1.GetItemText(comboBox1.SelectedValue));
-            int Cid = int.Parse(comboBox2.GetItemText(comboBox2.SelectedValue));
+            int Cid = int.Parse(comboBox2.Text);
             float note = float.Parse(textBox3.Text);
             if (verify())
             {

@@ -28,9 +28,8 @@ namespace GestionEspav
         }
         bool verify()
         {
-            if ((textBox1.Text == "") || (textBox9.Text == "") ||
-                (textBox9.Text == "") || (textBox4.Text == "") ||
-                (textBox5.Text == "") || (textBox6.Text == "") ||
+            if ((textBox1.Text == "") || 
+                (textBox9.Text == "") || (textBox4.Text == "") || (textBox6.Text == "") ||
                 (textBox7.Text == "") || textBox8.Text == "" || textBox2.Text == "")
             {
                 return false;
